@@ -59,6 +59,16 @@
   
   /* styles.css or your main CSS file */
 .navbar {
-  backdrop-filter: blur(12px); /* Adjust the blur radius as needed */
-  background-color: rgba(0, 0, 0, 0.178); /* Semi-transparent background */
+  backdrop-filter: blur(9px); /* Adjust the blur radius as needed */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
 }
+
+
+#header {
+  z-index: 1; 
+  position: relative; /* Keep this for correct positioning */
+}
+
+
+
+
