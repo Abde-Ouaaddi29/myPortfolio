@@ -14,7 +14,6 @@ export default function App() {
         <Routes>
           <Route element={<Layoute />}>
             <Route path="/" element={<Home/>} />
-            <Route path="/project/id" element={<Project />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />
         </Routes>

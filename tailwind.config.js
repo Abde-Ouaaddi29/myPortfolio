@@ -39,7 +39,7 @@ module.exports =withMT({
         'pulse-fast': 'pulse 5s infinite',
         'move-up-down': 'moveLR 3s ease-in-out infinite',
          move: 'move 10s ease-in-out infinite',
-        wave: 'wave 2s ease-in-out infinite', // Color wave animation (extended time for smooth motion)
+         wave: 'wave 2s ease-in-out infinite', // Color wave animation (extended time for smooth motion)
       },
       backgroundImage: {
         'gradient-wave': 'linear-gradient(220deg, #F97316, #FB923C, #EA580C, #F97316)', // Corresponding colors for orange-500, orange-400, and orange-700

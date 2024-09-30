@@ -19,7 +19,7 @@ const ParticlesComponent = () => {
       loaded={particlesLoaded}
       options={{
         background: {
-          color: { value: "#FFFFFF" },
+          // color: { value: "#FFFFFF" },
           // position: {value : "absolute"}
         },
         

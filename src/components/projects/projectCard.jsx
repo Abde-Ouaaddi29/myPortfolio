@@ -1,51 +1,103 @@
-"use client";
+import { Button } from "@material-tailwind/react";
+import { useState } from "react";
+import { FiGithub } from "react-icons/fi";
 
-import Image from "next/image";
-import React from "react";
-import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import Link from "next/link";
-
-export function CardProject() {
+export default function CardProject({ projects }) {
   return (
-    (<CardContainer className="inter-var">
-      <CardBody
-        className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white">
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail" />
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">
-            Sign up
-          </CardItem>
-        </div>
-      </CardBody>
-    </CardContainer>)
+    <>
+      {projects.length > 0 ? (
+        projects.map((project, projectIndex) => (
+          <div
+            key={projectIndex}
+            className="m-2 px-4 rounded bg-gray-100 hover:bg-gray-50 hover:shadow-lg hover:border transition-all duration-500"
+          >
+            <div className="py-6 flex justify-between items-center ">
+              <span className="text-xl font-bold text-gray-600 w-11/12 ">
+                {project?.title[0]}
+              </span>
+                <div
+                  className={`w-2 h-2 rounded-full  ${
+                    project?.hosted
+                      ? "online-dot bg-green-500"
+                      : "offline-dot bg-primary"
+                  }`}
+                ></div>
+            </div>
+
+            <div className="relative">
+              <ProjectImage project={project} />
+            </div>
+
+            <div className="flex flex-wrap items-center my-6">
+              {project?.builtTechnologies.map((item, index) => {
+                return <>
+                    <div
+                      key={index}
+                      className="pr-3 text-primary text-2xl cursor-default rounded hover:text-orange-300 duration-300"
+                    >
+                      {item}
+                    </div>
+                  </>
+                ;
+              })}
+            </div>
+
+            <div className="text-gray-500 py-2 ">{project?.description[0]}</div>
+
+            <div className="py-6 flex justify-between items-center">
+              <Button
+                disabled={!project.privacy}
+                className="tracking-widest bg-primary hover:bg-orange-900 flex justify-center items-center"
+              >
+                <div>Code | Github</div>
+                <FiGithub className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                disabled={!project.hosted}
+                className="tracking-widest bg-primary hover:bg-orange-900 flex justify-between items-center transition-all duration-500"
+              >
+                <span className="mr-2">
+                  {!project.hosted ? "Processing..." : "Demo"}
+                </span>
+              </Button>
+            </div>
+          </div>
+        ))
+      ) : (
+        <span className="p-4 text-center bg-gray-100">No Project</span>
+      )}
+    </>
+  );
+}
+
+// New component to manage each project image separately
+function ProjectImage({ project }) {
+  const [currentImg, setCurrentImg] = useState(project?.image[0]);
+
+  return (
+    <>
+      <img
+        className={`rounded-md border ${
+          project?.hosted ? "border-green-500" : "border-red-200 blur-[2.5px]"
+        } h-72 hover:scale-105 transition-all duration-700`}
+        src={currentImg}
+        alt="image"
+      />
+      <div className="absolute flex justify-center items-center bottom-2 right-2">
+        {Array.isArray(project?.image) &&
+          project?.image.length > 1 &&
+          project?.image.map((item, index) => (
+            <img
+              key={index}
+              onMouseEnter={() => setCurrentImg(item)}
+              alt={`small preview ${index}`}
+              className={`w-16 h-11 border ml-2 shadow-md ${
+                item === currentImg ? "border-green-500 scale-105" : ""
+              }`}
+              src={item}
+            />
+          ))}
+      </div>
+    </>
   );
 }

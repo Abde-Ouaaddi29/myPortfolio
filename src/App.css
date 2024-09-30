@@ -21,6 +21,31 @@
     transform: translate(-50%, -50%) scale(1);
     animation: ripple 1.5s infinite;
   }
+
+
+  .offline-dot {
+    position: relative;
+    width: 0.75rem;  /* Equivalent to w-3 */
+    height: 0.75rem; /* Equivalent to h-3 */
+    background-color: #a31616; /* Equivalent to bg-green-600 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    margin-right: 0.5rem; /* Equivalent to mr-2 */
+  }
+  
+  .offline-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff1919; /* Green color */
+    border-radius: 9999px;
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+    animation: ripple 1.5s infinite;
+  }
+  
   
   @keyframes ripple {
     0% {
@@ -68,6 +93,12 @@
   z-index: 1; 
   position: relative; /* Keep this for correct positioning */
 }
+
+#contact {
+  z-index: 1; 
+  position: relative; /* Keep this for correct positioning */
+}
+
 
 
 
