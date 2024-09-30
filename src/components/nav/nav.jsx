@@ -1,4 +1,7 @@
 import React from "react";
+// import { GiOrange } from "react-icons/gi";
+import { PiOrangeLight } from "react-icons/pi";
+
 import { BsGithub } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaUpwork } from "react-icons/fa6";
@@ -13,7 +16,6 @@ export default function Nav() {
   const lang = useSelector((store) => store.language);
   const DarkMode = useSelector((store) => store.DarkMode);
   const myInformation = useSelector((state) => state.persoInfo);
-  
 
   const dispatch = useDispatch();
 
@@ -26,40 +28,56 @@ export default function Nav() {
     dispatch(setDarkMode());
   };
 
-  console.log(myInformation)
+  console.log(myInformation);
 
   return (
     <div className="navbar shadow-lg py-4 flex justify-between items-center px-8 fixed top-0 left-0 right-0 z-50">
-      <div className="flex justify-between items-center cursor-pointer">
+      <a href="#" className="flex justify-between items-center cursor-pointer">
         <img
           className="w-10 h-10 hover:text-primary transition-all duration-300"
           src={logo}
           alt="Abde"
         />
-        <span className="text-2xl text-black font-light tracking-wider hover:text-primary transition-all duration-300">
+        <span className="text-2xl flex justify-center items-center text-black font-light tracking-wider hover:text-primary transition-all duration-300">
           <span className="text-primary hover:text-primary transition-all duration-300">
-            O
+            <PiOrangeLight />
           </span>
-          uaaddi
+          <span>uaaddi</span>
         </span>
-      </div>
+      </a>
       <div className="flex justify-between items-center px-4">
         <div className="flex justify-between items-center border-r border-black mr-3 py-1 px-3">
-          <a href={myInformation.mySocialMediaLinks.github} target="_blank" rel="noopener noreferrer">
+          <a
+            href={myInformation.mySocialMediaLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsGithub className="text-2xl text-black hover:text-primary transition-all duration-300" />
           </a>
           <div className="px-6">
-            <a href={myInformation.mySocialMediaLinks.linkedin} target="_blank" rel="noopener noreferrer">
+            <a
+              href={myInformation.mySocialMediaLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="text-2xl text-black hover:text-primary transition-all duration-300" />
             </a>
           </div>
           <div>
-            <a href={`mailto:${myInformation.mySocialMediaLinks.email}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`mailto:${myInformation.mySocialMediaLinks.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MdEmail className="text-2xl text-black hover:text-primary transition-all duration-300" />
             </a>
           </div>
           <div className="px-6">
-            <a href={myInformation.mySocialMediaLinks.upwork} target="_blank" rel="noopener noreferrer">
+            <a
+              href={myInformation.mySocialMediaLinks.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaUpwork className="text-2xl text-black hover:text-primary transition-all duration-300" />
             </a>
           </div>

@@ -15,13 +15,13 @@ export default function CardProject({ projects }) {
               <span className="text-xl font-bold text-gray-600 w-11/12 ">
                 {project?.title[0]}
               </span>
-                <div
-                  className={`w-2 h-2 rounded-full  ${
-                    project?.hosted
-                      ? "online-dot bg-green-500"
-                      : "offline-dot bg-primary"
-                  }`}
-                ></div>
+              <div
+                className={`w-2 h-2 rounded-full  ${
+                  project?.hosted
+                    ? "online-dot bg-green-500"
+                    : "offline-dot bg-primary"
+                }`}
+              ></div>
             </div>
 
             <div className="relative">
@@ -30,7 +30,8 @@ export default function CardProject({ projects }) {
 
             <div className="flex flex-wrap items-center my-6">
               {project?.builtTechnologies.map((item, index) => {
-                return <>
+                return (
+                  <>
                     <div
                       key={index}
                       className="pr-3 text-primary text-2xl cursor-default rounded hover:text-orange-300 duration-300"
@@ -38,28 +39,40 @@ export default function CardProject({ projects }) {
                       {item}
                     </div>
                   </>
-                ;
+                );
               })}
             </div>
 
             <div className="text-gray-500 py-2 ">{project?.description[0]}</div>
 
             <div className="py-6 flex justify-between items-center">
-              <Button
-                disabled={!project.privacy}
-                className="tracking-widest bg-primary hover:bg-orange-900 flex justify-center items-center"
+              <a
+                href={project?.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div>Code | Github</div>
-                <FiGithub className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                disabled={!project.hosted}
-                className="tracking-widest bg-primary hover:bg-orange-900 flex justify-between items-center transition-all duration-500"
+                <Button
+                  disabled={!project.privacy}
+                  className="tracking-widest bg-primary hover:bg-orange-900 flex justify-center items-center"
+                >
+                  <div>Code | Github</div>
+                  <FiGithub className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
+              <a
+                href={project?.deployLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="mr-2">
-                  {!project.hosted ? "Processing..." : "Demo"}
-                </span>
-              </Button>
+                <Button
+                  disabled={!project.hosted}
+                  className="tracking-widest bg-primary hover:bg-orange-900 flex justify-between items-center transition-all duration-500"
+                >
+                  <span className="mr-2">
+                    {!project.hosted ? "Processing..." : "Demo"}
+                  </span>
+                </Button>
+              </a>
             </div>
           </div>
         ))

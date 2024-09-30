@@ -13,7 +13,7 @@ import { SiPostman } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-import { SiJira } from "react-icons/si";
+import { SiJirasoftware } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -37,17 +37,18 @@ import gym2 from "./assets/screenGym2.png";
 import gym3 from "./assets/sceenGym2.png";
 import hospital1 from "./assets/pieHospital2.png";
 import hospital2 from "./assets/pieMedical.png";
+import portfolio from "./assets/portfolio.png";
 
 
 export const projectList = [
   {
     id: "234",
-    title: ["Plateforme E-commerce", "E-commerce Platform"], // French and English versions
+    title: ["Plateforme E-commerce", "E-commerce Platform"],
     description: [
-      "Une plateforme e-commerce entièrement fonctionnelle permettant aux utilisateurs de parcourir les produits, de les ajouter à leur panier et de faire des achats.",
-      "A fully functional e-commerce platform that allows users to browse products, add them to their cart, and make purchases."
+      "Une plateforme de commerce en ligne avec un tableau de bord administrateur et une authentification utilisateur, développée en équipe selon la méthodologie Agile, permettant aux utilisateurs de parcourir les produits, de les ajouter à leur panier et de réaliser des achats.",
+      "An ecommerce platform with an admin dashboard and user authentication, developed as a team using Agile methodology, allowing users to browse products, add them to their cart, and make purchases.",
     ],
-    image: [woodShop1, woodShop2, woodShop3], // Same for both languages
+    image: [woodShop1, woodShop2, woodShop3], 
     builtTechnologies: [
       <FaHtml5 />,
       <RiReactjsFill />,
@@ -55,10 +56,12 @@ export const projectList = [
       <RiTailwindCssFill />,
       <FaLaravel />,
       <SiMysql />,
-      <SiPostman />
-    ], // Technologies are same in both languages
-    deployLink: "https://example.com/ecommerce",
-    githubLink: "https://github.com/username/ecommerce-platform",
+      <SiPostman />,
+      <SiJirasoftware/>
+    ],
+    deployLink: "https://you-shop-ecom.netlify.app/",
+    githubLink:
+      "https://github.com/mohamed-dabach/you-shop-pro/tree/linking_to_server_ouaaddi",
     hosted: true,
     privacy: true,
   },
@@ -66,8 +69,8 @@ export const projectList = [
     id: "134",
     title: ["Système de Gestion des Tâches", "Task Management System"],
     description: [
-      "Une application de gestion des tâches qui aide les équipes à organiser et à prioriser efficacement leurs tâches.",
-      "A task management application that helps teams organize and prioritize their tasks effectively."
+      "Une application de gestion des tâches qui aide les équipes ou les étudiants à organiser et à prioriser efficacement leurs tâches. Chaque utilisateur peut créer son compte et gérer ses tâches depuis n'importe où.",
+      "A task management application that helps teams or students organize and prioritize their tasks efficiently. Each user can create their account and manage their tasks from anywhere.",
     ],
     image: [Tasks1, Tasks2],
     builtTechnologies: [
@@ -77,19 +80,23 @@ export const projectList = [
       <SiRedux />,
       <FaLaravel />,
       <SiMysql />,
-      <SiPostman />
+      <SiPostman />,
+
     ],
-    deployLink: "https://example.com/task-manager",
-    githubLink: "https://github.com/username/task-management-system",
+    deployLink: "https://tasks-management-ouaaddi.netlify.app/",
+    githubLink: "https://github.com/Abde-Ouaaddi29/full-stack-task-management",
     hosted: true,
     privacy: true,
   },
   {
     id: "847",
-    title: ["Ultra Gym | Système de gestion pour propriétaires de salles de sport", "Ultra Gym | Management System for Gym Owners"],
+    title: [
+      "Système de gestion de salles de sport",
+      "Management System for Gym",
+    ],
     description: [
-      "Un site portfolio personnel pour présenter mes projets et compétences.",
-      "A personal portfolio website to showcase my projects and skills."
+      "Système de gestion pour propriétaires de salles de sport.",
+      "Management System for Gym Owners.",
     ],
     image: [gym1, gym2, gym3],
     builtTechnologies: [
@@ -99,19 +106,24 @@ export const projectList = [
       <SiRedux />,
       <FaLaravel />,
       <SiMysql />,
-      <SiPostman />
+      <SiPostman />,
+      <SiJirasoftware/>
+
     ],
-    deployLink: "https://example.com/portfolio",
-    githubLink: "https://github.com/username/personal-portfolio",
+    deployLink: "https://example.com",
+    githubLink: "https://github.com/mohamed-dabach/gym-managment",
     hosted: false,
     privacy: false,
   },
   {
     id: "458",
-    title: ["Système de Gestion des Vaccinations à l'Hôpital", "Hospital Vaccination Management System"],
+    title: [
+      "Système de Gestion des Vaccinations à l'Hôpital",
+      "Hospital Vaccination Management System",
+    ],
     description: [
       "Une plateforme intégrée qui optimise l'administration et la surveillance des vaccinations dans un cadre hospitalier, améliorant l'efficacité et les soins aux patients.",
-      "An integrated platform that streamlines the administration and monitoring of vaccinations in a hospital setting, enhancing efficiency and patient care."
+      "An integrated platform that streamlines the administration and monitoring of vaccinations in a hospital setting, enhancing efficiency and patient care.",
     ],
     image: [hospital2, hospital1],
     builtTechnologies: [
@@ -120,10 +132,13 @@ export const projectList = [
       <RiTailwindCssFill />,
       <FaNode />,
       <SiExpress />,
-      <SiPostman />
+      <SiPostman />,
+      <SiJirasoftware/>,
+
+
     ],
-    deployLink: "https://example.com/vaccination-system",
-    githubLink: "https://github.com/username/hospital-vaccination-management",
+    deployLink: "https://pie-medical.netlify.app/",
+    githubLink: "https://github.com/mohamed-dabach/pie_medical",
     hosted: true,
     privacy: true,
   },
@@ -132,7 +147,7 @@ export const projectList = [
     title: ["Détails des Films Célèbres", "Famous Movies Details"],
     description: [
       "Une application simple qui affiche les détails des films célèbres en se basant sur une API de films.",
-      "A simple application that displays details of famous movies based on a movie API."
+      "A simple application that displays details of famous movies based on a movie API.",
     ],
     image: [Movie1, Movie2],
     builtTechnologies: [
@@ -140,34 +155,56 @@ export const projectList = [
       <RiReactjsFill />,
       <SiRedux />,
       <RiTailwindCssFill />,
-      <SiPostman />
+      <SiPostman />,
     ],
-    deployLink: "https://example.com/movies-details",
-    githubLink: "https://github.com/username/movies-details",
+    deployLink: "https://movies-details-ouaaddi.netlify.app/",
+    githubLink: "https://github.com/Abde-Ouaaddi29/MOVIES-TP-React.js-Api",
     hosted: true,
     privacy: true,
   },
   {
     id: "873",
-    title: ["TodoList en Ligne | Organisation", "Online TodoList | Organization"],
+    title: [
+      "TodoList en Ligne | Organisation",
+      "Online TodoList | Organization",
+    ],
     description: [
       "Une application simple de liste de tâches pour organiser les tâches quotidiennes.",
-      "A simple todo list application for organizing daily tasks."
+      "A simple todo list application for organizing daily tasks.",
     ],
     image: [Todo1],
     builtTechnologies: [
       <FaHtml5 />,
       <RiReactjsFill />,
       <SiRedux />,
-      <RiTailwindCssFill />
+      <RiTailwindCssFill />,
     ],
-    deployLink: "https://example.com/todolist",
-    githubLink: "https://github.com/username/todolist",
+    deployLink: "https://abde-ouaaddi29.github.io/todoList/",
+    githubLink: "https://github.com/Abde-Ouaaddi29/todoList",
+    hosted: true,
+    privacy: true,
+  },
+  {
+    id: "873",
+    title: ["Site Portfolio", "Portfolio Website"],
+    description: [
+      "Une application simple de liste de tâches pour organiser les tâches quotidiennes.",
+      "A simple todo list application for organizing daily tasks.",
+    ],
+    image: [portfolio],
+    builtTechnologies: [
+      <FaHtml5 />,
+      <RiReactjsFill />,
+      <SiRedux />,
+      <RiTailwindCssFill />,
+    ],
+    deployLink: "https://",
+    githubLink:
+      "https://github.com/Abde-Ouaaddi29/Portfolio",
     hosted: true,
     privacy: true,
   },
 ];
-
 
 ////////// myInformation /////////
 
@@ -175,20 +212,20 @@ import img from "./assets/imgRbg.png";
 import about2 from "./assets/header2.jpg";
 
 export const myInfoList = {
-  fullName: "ABDERRAHIM OUAADDI", 
-  myImage: img, 
-  phone:'+212 689474500',
+  fullName: "ABDERRAHIM OUAADDI",
+  myImage: img,
+  phone: "+212 689474500",
   speciality: [
     ["Développeur Full Stack", "Full Stack Developer"],
     ["Développeur Back-End", "Back-End Developer"],
-    ["Développeur Front-End", "Front-End Developer"]
+    ["Développeur Front-End", "Front-End Developer"],
   ],
   basePlace: ["Agadir, Maroc", "Agadir, Morocco"],
   status: [
     "Disponible pour un poste à temps plein",
-    "Available for a full-time position"
+    "Available for a full-time position",
   ],
-  cv: "path_to_your_cv.pdf", 
+  cv: "path_to_your_cv.pdf",
   myFeatures: [
     ["Développement Web", "Web Development"],
     ["Création d'APIs", "API Creation"],
@@ -196,20 +233,20 @@ export const myInfoList = {
     ["Créer des solutions innovantes", "Create innovative solutions"],
     ["Esprit d'Équipe", "Team Spirit"],
     ["Compétences en Communication", "Communication Skills"],
-    ["Motivé & Flexible", "Motivated & Flexible"]
+    ["Motivé & Flexible", "Motivated & Flexible"],
   ],
   mySocialMediaLinks: {
     email: "abderrahimouaaddi371@gmail.com",
     github: "https://github.com/Abde-Ouaaddi29",
     upwork: "https://www.upwork.com/freelancers/~0155a3ba5eb4a2f9e6",
     linkedin: "http://linkedin.com/in/abderrahim-ouaaddi-a01921292",
-    twitter: "https://x.com/abderrahim88717"
+    twitter: "https://x.com/abderrahim88717",
   },
   myDesc: [
     "Je suis un développeur Full Stack passionné avec une expertise dans le développement frontend et backend. J'excelle dans la création d'APIs et le développement de solutions innovantes aux problèmes du monde réel. Je m'épanouis dans des environnements de travail en équipe et j'ai de l'expérience en méthodologie Agile et Scrum.",
-    "I'm a passionate and driven Full Stack Developer with expertise in both frontend and backend development. I excel at creating APIs and developing innovative solutions to real-world problems. I thrive in team environments and am experienced in Agile Methodology and Scrum."
+    "I'm a passionate and driven Full Stack Developer with expertise in both frontend and backend development. I excel at creating APIs and developing innovative solutions to real-world problems. I thrive in team environments and am experienced in Agile Methodology and Scrum.",
   ],
-  myImageDesc: about2
+  myImageDesc: about2,
 };
 
 ///////// experiencesList ////////////
@@ -217,7 +254,7 @@ export const myInfoList = {
 export const experiencesList = [
   {
     id: "23",
-    date: ["Mai 2024", "May 2024"], 
+    date: ["Mai 2024", "May 2024"],
     title: [
       "Développeur Full Stack (Stage)",
       "Full Stack Developer (Internship)",
@@ -240,7 +277,7 @@ export const experiencesList = [
       ],
     ],
     technologies: [
-      "React.js", 
+      "React.js",
       "Tailwind CSS",
       "Express.js",
       "Node.js",
@@ -251,52 +288,39 @@ export const experiencesList = [
   },
 ];
 
-
 //////// education /////////
 
 export const educationList = [
   {
     year: "2022-2024",
     degree: [
-      "Diplôme en Développement Digital - Web Full Stack", 
-      "Diploma in Digital Development - Web Full Stack"
-    ], 
+      "Diplôme en Développement Digital - Web Full Stack",
+      "Diploma in Digital Development - Web Full Stack",
+    ],
     institution: [
-      "OFPPT - Institut Spécialisé de Technologie Appliquée - Tafraout", 
-      "OFPPT - Specialized Institute of Applied Technology - Tafraout"
-    ], 
+      "OFPPT - Institut Spécialisé de Technologie Appliquée - Tafraout",
+      "OFPPT - Specialized Institute of Applied Technology - Tafraout",
+    ],
   },
   {
     year: "2021-2022",
-    degree: [
-      "Cours d'Anglais", 
-      "English Courses"
-    ],
+    degree: ["Cours d'Anglais", "English Courses"],
     institution: [
-      "Centre Privé - Berlingou Hay Salam Agadir", 
-      "Private Center - Berlingou Hay Salam Agadir"
+      "Centre Privé - Berlingou Hay Salam Agadir",
+      "Private Center - Berlingou Hay Salam Agadir",
     ],
   },
   {
     year: "2020-2022",
-    degree: [
-      "Faculté des Sciences Appliquées", 
-      "Faculty of Applied Sciences"
-    ],
-    institution: [
-      "Agadir", 
-      "Agadir"
-    ],
+    degree: ["Faculté des Sciences Appliquées", "Faculty of Applied Sciences"],
+    institution: ["Agadir", "Agadir"],
   },
   {
     year: "2019-2020",
-    degree: [
-      "Baccalauréat Scientifique", 
-      "Scientific Baccalaureate"
-    ],
+    degree: ["Baccalauréat Scientifique", "Scientific Baccalaureate"],
     institution: [
-      "Lycée Elhaj Said - Drarga Agadir", 
-      "Lycée Elhaj Said - Drarga Agadir"
+      "Lycée Elhaj Said - Drarga Agadir",
+      "Lycée Elhaj Said - Drarga Agadir",
     ],
   },
 ];

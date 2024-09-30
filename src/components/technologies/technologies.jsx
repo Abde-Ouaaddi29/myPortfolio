@@ -12,7 +12,7 @@ import { SiPostman } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-import { SiJira } from "react-icons/si";
+import { SiJirasoftware } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -86,7 +86,7 @@ export default function Technologies() {
       onMouseEnter={() => Mouse("Node-js")}
       className="fill-green-600 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
-    <SiJira
+    <SiJirasoftware
       onMouseEnter={() => Mouse("Jira | Scrum")}
       className="fill-blue-400 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
