@@ -31,16 +31,32 @@ export default function Contact() {
         </a>
         <div className=" font-light tracking-wider mt-5 flex justify-center  ">
           <div className=" flex ">
-            <a href="">
+            <a
+              href={myInformation.mySocialMediaLinks.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaXTwitter className="w-7 h-7 mr-4 hover:scale-105 hover:text-gray-600 transition-all duration-300" />
             </a>
-            <a href={myInformation.mySocialMediaLinks.github}>
+            <a
+              href={myInformation.mySocialMediaLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <BsGithub className="w-7 h-7 mr-4 hover:scale-105 hover:text-gray-600 transition-all duration-300" />
             </a>
-            <a href={myInformation.mySocialMediaLinks.upwork}>
+            <a
+              href={myInformation.mySocialMediaLinks.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaUpwork className="w-7 h-7 mr-4 hover:scale-105 hover:text-gray-600 transition-all duration-300" />
             </a>
-            <a href={myInformation.mySocialMediaLinks.linkedin}>
+            <a
+              href={myInformation.mySocialMediaLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="w-7 h-7 hover:scale-105 hover:text-gray-600 transition-all duration-300 " />
             </a>
           </div>

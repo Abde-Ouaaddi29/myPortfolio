@@ -9,7 +9,7 @@ export default function CardProject({ projects }) {
         projects.map((project, projectIndex) => (
           <div
             key={projectIndex}
-            className="m-2 px-4 rounded bg-gray-100 hover:bg-gray-50 hover:shadow-lg hover:border transition-all duration-500"
+            className="m-2 px-4 rounded relative bg-gray-100 hover:bg-gray-50 hover:shadow-lg hover:border transition-all duration-500"
           >
             <div className="py-6 flex justify-between items-center ">
               <span className="text-xl font-bold text-gray-600 w-11/12 ">
@@ -45,7 +45,7 @@ export default function CardProject({ projects }) {
 
             <div className="text-gray-500 py-2 ">{project?.description[0]}</div>
 
-            <div className="py-6 flex justify-between items-center">
+            <div className="py-6 flex justify-between items-center ">
               <a
                 href={project?.githubLink}
                 target="_blank"

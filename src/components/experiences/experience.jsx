@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { experiencesList } from "../../constants";
+import { experiencesList } from "../../constants/constants";
 
 export default function Experience() {
-
   const [experiences, setExperiences] = useState(experiencesList);
   console.log(experiences);
 

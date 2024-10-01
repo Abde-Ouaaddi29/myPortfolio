@@ -23,7 +23,6 @@ export default function Header() {
   const [fullText, setFullText] = useState(texts[0]);
   const [index, setIndex] = useState(0);
 
-
   // console.log(useSelector((store) => store))
 
   useEffect(() => {
@@ -84,15 +83,21 @@ export default function Header() {
                 <MdDownload />{" "}
               </span>
             </Button>
-            <Button className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
-              Get in Touch{" "}
-              <span className="ml-2 text-2xl ">
-                <SiSocialblade />{" "}
-              </span>
-            </Button>
+            <a
+              href={myInformation.getTouchLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
+                Get in Touch{" "}
+                <span className="ml-2 text-2xl ">
+                  <SiSocialblade />{" "}
+                </span>
+              </Button>
+            </a>
           </div>
         </div>
-
+        
         <div className="outline outline-green-500 outline-offset-4 animate-move rounded-full w-[24rem] relative m-6">
           <div className="bg-gradient-wave animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
           <img

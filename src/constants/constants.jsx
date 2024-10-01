@@ -24,20 +24,20 @@ import { SiSonarqube } from "react-icons/si";
 
 ////////// images /////////
 
-import woodShop1 from "./assets/screen1WoodSHop.png";
-import woodShop2 from "./assets/screen2WoodShop.png";
-import woodShop3 from "./assets/screen3WoodShop.png";
-import Movie1 from "./assets/screenMovies.png";
-import Movie2 from "./assets/ScreenMovies2.png";
-import Tasks1 from "./assets/screenFullStackTasks.png";
-import Tasks2 from "./assets/sceenfullstchTask2.png";
-import Todo1 from "./assets/screen1Deily.png";
-import gym1 from "./assets/screenUltraGym1.png";
-import gym2 from "./assets/screenGym2.png";
-import gym3 from "./assets/sceenGym2.png";
-import hospital1 from "./assets/pieHospital2.png";
-import hospital2 from "./assets/pieMedical.png";
-import portfolio from "./assets/portfolio.png";
+import woodShop1 from "../assets/screen1WoodSHop.png";
+import woodShop2 from "../assets/screen2WoodShop.png";
+import woodShop3 from "../assets/screen3WoodShop.png";
+import Movie1 from "../assets/screenMovies.png";
+import Movie2 from "../assets/ScreenMovies2.png";
+import Tasks1 from "../assets/screenFullStackTasks.png";
+import Tasks2 from "../assets/sceenfullstchTask2.png";
+import Todo1 from "../assets/screen1Deily.png";
+import gym1 from "../assets/screenUltraGym1.png";
+import gym2 from "../assets/screenGym2.png";
+import gym3 from "../assets/sceenGym2.png";
+import hospital1 from "../assets/pieHospital2.png";
+import hospital2 from "../assets/pieMedical.png";
+import portfolio from "../assets/portfolio.png";
 
 
 export const projectList = [
@@ -95,8 +95,8 @@ export const projectList = [
       "Management System for Gym",
     ],
     description: [
-      "Système de gestion pour propriétaires de salles de sport.",
-      "Management System for Gym Owners.",
+      "Système de gestion pour propriétaires de salles de sport, permettant aux gestionnaires de ne plus rencontrer de problèmes d'organisation et de gérer facilement l'abonnement de chaque client",
+      "Management system for gym owners, allowing managers to avoid organizational issues and easily manage each client's subscription.",
     ],
     image: [gym1, gym2, gym3],
     builtTechnologies: [
@@ -111,7 +111,7 @@ export const projectList = [
 
     ],
     deployLink: "https://example.com",
-    githubLink: "https://github.com/mohamed-dabach/gym-managment",
+    githubLink: "https://example.com",
     hosted: false,
     privacy: false,
   },
@@ -122,8 +122,8 @@ export const projectList = [
       "Hospital Vaccination Management System",
     ],
     description: [
-      "Une plateforme intégrée qui optimise l'administration et la surveillance des vaccinations dans un cadre hospitalier, améliorant l'efficacité et les soins aux patients.",
-      "An integrated platform that streamlines the administration and monitoring of vaccinations in a hospital setting, enhancing efficiency and patient care.",
+      "Une plateforme intégrée qui optimise l'administration et la surveillance des vaccinations dans un cadre hospitalier, améliorant l'efficacité et les soins aux patients. Tout patient ou responsable d'enfant peut prendre un rendez-vous de vaccination avec un médecin.",
+      "An integrated platform that optimizes the administration and monitoring of vaccinations in a hospital setting, improving efficiency and patient care. Any patient or child's guardian can schedule a vaccination appointment with a doctor.",
     ],
     image: [hospital2, hospital1],
     builtTechnologies: [
@@ -188,8 +188,8 @@ export const projectList = [
     id: "873",
     title: ["Site Portfolio", "Portfolio Website"],
     description: [
-      "Une application simple de liste de tâches pour organiser les tâches quotidiennes.",
-      "A simple todo list application for organizing daily tasks.",
+      "Un site portfolio personnel présentant des projets, des compétences et des informations de contact.",
+      "A personal portfolio website showcasing projects, skills, and contact information.",
     ],
     image: [portfolio],
     builtTechnologies: [
@@ -208,8 +208,8 @@ export const projectList = [
 
 ////////// myInformation /////////
 
-import img from "./assets/imgRbg.png";
-import about2 from "./assets/header2.jpg";
+import img from "../assets/imgRbg.png";
+import about2 from "../assets/header2.jpg";
 
 export const myInfoList = {
   fullName: "ABDERRAHIM OUAADDI",
@@ -226,6 +226,7 @@ export const myInfoList = {
     "Available for a full-time position",
   ],
   cv: "path_to_your_cv.pdf",
+  getTouchLink: "https://linktr.ee/abde29ouaaddi",
   myFeatures: [
     ["Développement Web", "Web Development"],
     ["Création d'APIs", "API Creation"],

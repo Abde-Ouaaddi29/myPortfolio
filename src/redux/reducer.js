@@ -1,4 +1,4 @@
-import { myInfoList } from "../constants"
+import { myInfoList } from "../constants/constants"
 import { SET_DARKMODE, SET_LANG } from "./typeActions"
 
 const initialStates = { 

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { educationList } from "../../constants";
+import { educationList } from "../../constants/constants";
 
 export default function Experience() {
-
   const [educations, setEducations] = useState(educationList);
   console.log(educations);
 
@@ -36,7 +35,6 @@ export default function Experience() {
                       <h5 className="text-gray-600  font-semibold my-4">
                         {education?.institution[0]}
                       </h5>
-                      
                     </div>
                   </div>
                 </div>
