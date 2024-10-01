@@ -210,6 +210,8 @@ export const projectList = [
 
 import img from "../assets/imgRbg.png";
 import about2 from "../assets/header2.jpg";
+import Cv_Fr from "../../public/ABDERRAHIM_OUAADDI_CV_english.pdf";
+import Cv_En from "../../public/ABDERRAHIM_OUAADDI_french.pdf";
 
 export const myInfoList = {
   fullName: "ABDERRAHIM OUAADDI",
@@ -225,7 +227,7 @@ export const myInfoList = {
     "Disponible pour un poste à temps plein",
     "Available for a full-time position",
   ],
-  cv: "path_to_your_cv.pdf",
+  cv: [Cv_Fr, Cv_En],
   getTouchLink: "https://linktr.ee/abde29ouaaddi",
   myFeatures: [
     ["Développement Web", "Web Development"],

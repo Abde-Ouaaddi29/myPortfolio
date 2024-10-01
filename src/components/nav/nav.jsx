@@ -11,25 +11,40 @@ import { IoSunnyOutline } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode, setLang } from "../../redux/typeActions";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Nav() {
   const lang = useSelector((store) => store.language);
   const DarkMode = useSelector((store) => store.DarkMode);
   const myInformation = useSelector((state) => state.persoInfo);
-
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang");
+    const savedDarkMode = localStorage.getItem("darkmode");
+
+    if (savedLang) {
+      dispatch(setLang(savedLang));
+    }
+
+    if (savedDarkMode !== null) {
+      const isDarkMode = JSON.parse(savedDarkMode); // Parse stored value
+      dispatch(setDarkMode(isDarkMode)); // Explicitly set the Redux state
+    }
+  }, [dispatch]);
 
   const Handlelang = () => {
     const newLang = lang === "Fr" ? "En" : "Fr";
+    localStorage.setItem("lang", newLang);
     dispatch(setLang(newLang));
   };
 
   const HandleDarkMode = () => {
+    const newDarkMode = !DarkMode;
     dispatch(setDarkMode());
+    localStorage.setItem("darkmode", JSON.stringify(newDarkMode)); // Store new value in localStorage
   };
-
-  console.log(myInformation);
-
   return (
     <div className="navbar shadow-lg py-4 flex justify-between items-center px-8 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
@@ -38,11 +53,11 @@ export default function Nav() {
           src={logo}
           alt="Abde"
         />
-        <span className="text-2xl flex justify-center items-center text-black font-light tracking-wider hover:text-primary transition-all duration-300">
+        <span className="text-2xl flex justify-center items-center font-light tracking-wider hover:text-primary transition-all duration-300">
           <span className="text-primary hover:text-primary transition-all duration-300">
             <PiOrangeLight />
           </span>
-          <span>uaaddi</span>
+          <span className={`${DarkMode ? "text-white" : "text-black" }`}>uaaddi</span>
         </span>
       </a>
       <div className="flex justify-between items-center px-4">
@@ -52,7 +67,11 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsGithub className="text-2xl text-black hover:text-primary transition-all duration-300" />
+            <BsGithub
+              className={`text-2xl ${
+                DarkMode ? "text-white" : "text-black"
+              } hover:text-primary transition-all duration-300`}
+            />
           </a>
           <div className="px-6">
             <a
@@ -60,7 +79,11 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="text-2xl text-black hover:text-primary transition-all duration-300" />
+              <FaLinkedin
+                className={`text-2xl ${
+                  DarkMode ? "text-white" : "text-black"
+                } hover:text-primary transition-all duration-300`}
+              />
             </a>
           </div>
           <div>
@@ -69,7 +92,11 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MdEmail className="text-2xl text-black hover:text-primary transition-all duration-300" />
+              <MdEmail
+                className={`text-2xl ${
+                  DarkMode ? "text-white" : "text-black"
+                } hover:text-primary transition-all duration-300`}
+              />
             </a>
           </div>
           <div className="px-6">
@@ -78,7 +105,11 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaUpwork className="text-2xl text-black hover:text-primary transition-all duration-300" />
+              <FaUpwork
+                className={`text-2xl ${
+                  DarkMode ? "text-white" : "text-black"
+                } hover:text-primary transition-all duration-300`}
+              />
             </a>
           </div>
         </div>
@@ -92,7 +123,7 @@ export default function Nav() {
           </div>
           <div
             onClick={Handlelang}
-            className="font-medium text-black text-xl hover:text-primary transition-all duration-300 cursor-pointer"
+            className={`${DarkMode ? "text-white " : " text-black "} font-medium text-xl hover:text-primary transition-all duration-300 cursor-pointer`}
           >
             {lang === "Fr" ? "En" : "Fr"}
           </div>

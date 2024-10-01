@@ -22,7 +22,8 @@ export const GeneralReducer = (state = initialStates, action) => {
 
       case SET_DARKMODE:
         return {
-          ...state, DarkMode: !state.DarkMode
+          ...state, 
+          DarkMode: action.payload !== undefined ? action.payload : !state.DarkMode, 
         }
     default :
      return state 

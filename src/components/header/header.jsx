@@ -10,6 +10,7 @@ import { Button } from "@material-tailwind/react";
 import ParticlesComponent from "../ParticlesComponent";
 import { useSelector } from "react-redux";
 
+
 export default function Header() {
   const myInformation = useSelector((state) => state.persoInfo);
 
@@ -45,13 +46,13 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="px-10 relative bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)]  "
+      className="px-10 relative bg-black bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)]  "
     >
       <ParticlesComponent />
 
       <div className="flex justify-between items-center h-[110vh] relative">
         <div className="relative w-5/12 ">
-          <h1 className="text-4xl tracking-wider  text-black ">
+          <h1 className="text-4xl tracking-wider text-black ">
             {myInfo.fullName}
           </h1>
           <div className="text-black mb-4 font-bold tracking-wider mt-8 flex items-end ">
@@ -76,13 +77,22 @@ export default function Header() {
             {myInfo.status[0]}
           </div>
           <div className=" flex items-center mt-10">
-            <Button className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
-              Download CV{" "}
-              <span className="ml-2 text-2xl ">
-                {" "}
-                <MdDownload />{" "}
-              </span>
-            </Button>
+            <a 
+             href={myInfo.cv[0]} 
+             target="_blank" 
+             rel="noopener noreferrer" 
+           
+            >
+              <Button
+                className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary"
+              >
+                Download CV{" "}
+                <span className="ml-2 text-2xl ">
+                  {" "}
+                  <MdDownload />{" "}
+                </span>
+              </Button>
+            </a>
             <a
               href={myInformation.getTouchLink}
               target="_blank"
@@ -97,7 +107,7 @@ export default function Header() {
             </a>
           </div>
         </div>
-        
+
         <div className="outline outline-green-500 outline-offset-4 animate-move rounded-full w-[24rem] relative m-6">
           <div className="bg-gradient-wave animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
           <img

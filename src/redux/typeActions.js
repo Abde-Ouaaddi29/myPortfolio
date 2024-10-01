@@ -3,9 +3,10 @@ export const SET_MYINFO = 'SET_MYINFO';
 export const SET_LANG = 'SET_LANG';
 
 
-export const setDarkMode = () => {
+export const setDarkMode = (value) => {
     return {
-        type:SET_DARKMODE,
+        type: SET_DARKMODE,
+        payload: value
     }
 }
 
