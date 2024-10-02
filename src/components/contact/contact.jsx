@@ -11,15 +11,17 @@ import { useSelector } from "react-redux";
 export default function Contact() {
   const myInformation = useSelector((state) => state.persoInfo);
   const DarkMode = useSelector((store) => store.DarkMode);
+  const language = useSelector((store) => store.language);
+
 
 
   return (
     <div id="contact" className={`${DarkMode ? 'text-white' : 'text-dark'} py-10 `} >
       <ParticlesComponent />
-      <div className={` p-2 text-center text-4xl font-bold`} >Get in Touch</div>
+      <div className={` p-2 text-center tracking-wider text-4xl font-bold`} >{language == 'Fr' ? 'Contactez-moi' : 'Get In Touch'}</div>
       <div className="text-center py-16">
         <div className=" font-light tracking-wider mb-5">
-          {myInformation.basePlace[0]}
+          {language == 'Fr' ? myInformation.basePlace[0] : myInformation.basePlace[1]}
         </div>
         <div className=" font-light tracking-wider mb-5">
           {myInformation.phone}

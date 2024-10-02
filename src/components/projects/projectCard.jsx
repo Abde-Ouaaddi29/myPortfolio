@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 
 export default function CardProject({ projects }) {
   const DarkMode = useSelector((store) => store.DarkMode);
+  const language = useSelector((store) => store.language);
+
 
   return (
     <>
@@ -16,7 +18,7 @@ export default function CardProject({ projects }) {
           >
             <div className="py-6 flex justify-between items-center ">
               <span className={`${DarkMode ? 'text-gray-400' : 'text-gray-600' } text-xl font-bold w-11/12`}>
-                {project?.title[0]}
+                {language == 'Fr' ? project?.title[0] : project?.title[1]}
               </span>
               <div
                 className={`w-2 h-2 rounded-full  ${
@@ -46,7 +48,7 @@ export default function CardProject({ projects }) {
               })}
             </div>
 
-            <div className={`${DarkMode ? 'text-gray-400' : 'text-gray-500' }  py-2 `} >{project?.description[0]}</div>
+            <div className={`${DarkMode ? 'text-gray-400' : 'text-gray-500' }  py-2 `} >{language == 'Fr' ? project?.description[0] : project?.description[1]} </div>
 
             <div className="py-6 flex justify-between items-center ">
               <a
@@ -72,7 +74,7 @@ export default function CardProject({ projects }) {
                   className="tracking-widest bg-primary hover:bg-orange-900 flex justify-between items-center transition-all duration-500"
                 >
                   <span className="mr-2">
-                    {!project.hosted ? "Processing..." : "Demo"}
+                    {!project.hosted ? "in progress" : "Demo"}
                   </span>
                 </Button>
               </a>

@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 export default function Experience() {
   const [educations, setEducations] = useState(educationList);
   const DarkMode = useSelector((store) => store.DarkMode);
+  const language = useSelector((store) => store.language);
+
 
   console.log(educations);
 
@@ -32,11 +34,12 @@ export default function Experience() {
                       <h3 className="text-primary font-semibold mb-1">
                         {education?.year}
                       </h3>
-                      <h4 className={`${DarkMode ? 'text-gray-500' : 'text-gray-800'} text-xl  font-semibold mb-2`}>
-                        {education?.degree[0]}
-                      </h4>
+                      <div className={`${DarkMode ? 'text-gray-500' : 'text-gray-800'} text-xl flex flex-col  font-semibold mb-2`}>  
+                        <span> - {language == 'Fr' ? education?.degree[0] : education?.degree[1]}</span>
+                        <span> {language == 'Fr' ? education.certification ? '-' + ' '+ education.certification[0] : '' : education.certification ? '-' + ' '+ education.certification[1] : '' }</span>
+                      </div>
                       <h5 className="text-gray-600  font-semibold my-4">
-                        {education?.institution[0]}
+                        { language == 'Fr' ? education?.institution[0] : education?.institution[1] }
                       </h5>
                     </div>
                   </div>

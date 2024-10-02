@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 export default function Experience() {
   const [experiences, setExperiences] = useState(experiencesList);
   const DarkMode = useSelector((store) => store.DarkMode);
+  const language = useSelector((store) => store.language);
+
 
   console.log(experiences);
 
@@ -33,16 +35,17 @@ export default function Experience() {
 
                     <div className="pb-8">
                       <h3 className="text-primary font-semibold mb-1">
-                        {experience?.date[0]}
+                        {language == 'Fr' ? experience?.date[0] : experience?.date[1]}
                       </h3>
                       <h4 className={`${DarkMode ? 'text-white' : 'text-black' } text-2xl font-semibold mb-2`}>
-                        {experience?.title[0]}
+                        {language == 'Fr' ? experience?.title[0] : experience?.title[1]}
+
                       </h4>
                       <h5 className="text-gray-600 text-xl font-semibold my-4">
-                        {experience?.company[0]}
+                      {language == 'Fr' ? experience?.company[0] : experience?.company[1]}
                       </h5>
                       <ul className="list-disc ml-6 text-gray-700">
-                        {experience.roles[0].map((role) => {
+                        {experience.roles[language == 'Fr' ? 0 : 1].map((role) => {
                           return (
                             <>
                               <li className="mb-2 text-xl text-gray-500">
@@ -54,7 +57,7 @@ export default function Experience() {
                       </ul>
 
                       <h5 className="text-gray-600 text-xl font-semibold my-4">
-                        Used Technologies
+                        {language == 'Fr' ? 'Technologies Utilisées' : 'Used Technologies'}
                       </h5>
                       <ul className="list-disc ml-6  text-gray-700">
                         {experience?.technologies.map((tech, key) => {

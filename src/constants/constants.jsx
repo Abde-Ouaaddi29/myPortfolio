@@ -39,8 +39,6 @@ import hospital1 from "../assets/pieHospital2.png";
 import hospital2 from "../assets/pieMedical.png";
 import portfolio from "../assets/portfolio.png";
 
-
-
 export const projectList = [
   {
     id: "234",
@@ -49,7 +47,7 @@ export const projectList = [
       "Une plateforme de commerce en ligne avec un tableau de bord administrateur et une authentification utilisateur, développée en équipe selon la méthodologie Agile, permettant aux utilisateurs de parcourir les produits, de les ajouter à leur panier et de réaliser des achats.",
       "An ecommerce platform with an admin dashboard and user authentication, developed as a team using Agile methodology, allowing users to browse products, add them to their cart, and make purchases.",
     ],
-    image: [woodShop1, woodShop2, woodShop3], 
+    image: [woodShop1, woodShop2, woodShop3],
     builtTechnologies: [
       <FaHtml5 />,
       <RiReactjsFill />,
@@ -58,7 +56,7 @@ export const projectList = [
       <FaLaravel />,
       <SiMysql />,
       <SiPostman />,
-      <SiJirasoftware/>
+      <SiJirasoftware />,
     ],
     deployLink: "https://you-shop-ecom.netlify.app/",
     githubLink:
@@ -82,7 +80,6 @@ export const projectList = [
       <FaLaravel />,
       <SiMysql />,
       <SiPostman />,
-
     ],
     deployLink: "https://tasks-management-ouaaddi.netlify.app/",
     githubLink: "https://github.com/Abde-Ouaaddi29/full-stack-task-management",
@@ -108,8 +105,7 @@ export const projectList = [
       <FaLaravel />,
       <SiMysql />,
       <SiPostman />,
-      <SiJirasoftware/>
-
+      <SiJirasoftware />,
     ],
     deployLink: "https://example.com",
     githubLink: "https://example.com",
@@ -134,9 +130,7 @@ export const projectList = [
       <FaNode />,
       <SiExpress />,
       <SiPostman />,
-      <SiJirasoftware/>,
-
-
+      <SiJirasoftware />,
     ],
     deployLink: "https://pie-medical.netlify.app/",
     githubLink: "https://github.com/mohamed-dabach/pie_medical",
@@ -200,8 +194,7 @@ export const projectList = [
       <RiTailwindCssFill />,
     ],
     deployLink: "https://",
-    githubLink:
-      "https://github.com/Abde-Ouaaddi29/Portfolio",
+    githubLink: "https://github.com/Abde-Ouaaddi29/Portfolio",
     hosted: true,
     privacy: true,
   },
@@ -247,8 +240,8 @@ export const myInfoList = {
     twitter: "https://x.com/abderrahim88717",
   },
   myDesc: [
-    "Je suis un développeur Full Stack passionné avec une expertise dans le développement frontend et backend. J'excelle dans la création d'APIs et le développement de solutions innovantes aux problèmes du monde réel. Je m'épanouis dans des environnements de travail en équipe et j'ai de l'expérience en méthodologie Agile et Scrum.",
-    "I'm a passionate and driven Full Stack Developer with expertise in both frontend and backend development. I excel at creating APIs and developing innovative solutions to real-world problems. I thrive in team environments and am experienced in Agile Methodology and Scrum.",
+    "Salut! 👋 Je suis un développeur Full Stack passionné. Je dispose d'une solide formation dans le développement d'applications web dynamiques et efficaces. Mes compétences couvrent les technologies frontend telles que HTML5, CSS3, Bootstrap, Tailwind CSS, jQuery, JavaScript, et ReactJS, ainsi que le développement backend avec Node.js, Express.js, Laravel, MySQL, MongoDB, et PHP. Mon parcours en développement web a été marqué par un apprentissage continu et un engagement à fournir des solutions de haute qualité qui répondent aux besoins des clients et des utilisateurs. Que ce soit en travaillant de manière indépendante ou en collaboration avec une équipe, j'apporte créativité, compétences en résolution de problèmes et maîtrise technique à chaque projet. En dehors de mes activités professionnelles, je suis un passionné de freediving, de course à pied, de fatball et de boxe. Ces loisirs m'enseignent la discipline, la résilience, et l'importance de se fixer des objectifs ambitieux. ",
+    "Hi! 👋 I'm a passionate Full Stack Developer. I have a solid background in developing dynamic and efficient web applications. My skills cover frontend technologies such as HTML5, CSS3, Bootstrap, Tailwind CSS, jQuery, JavaScript, and ReactJS, as well as backend development with Node.js, Express.js, Laravel, MySQL, MongoDB, and PHP. My journey in web development has been marked by continuous learning and a commitment to providing high-quality solutions that meet the needs of both clients and users. Whether working independently or collaborating with a team, I bring creativity, problem-solving skills, and technical expertise to every project. Outside of my professional activities, I am passionate about freediving, running, fatball, and boxing. These hobbies teach me discipline, resilience, and the importance of setting ambitious goals.",
   ],
   myImageDesc: about2,
 };
@@ -304,6 +297,10 @@ export const educationList = [
     institution: [
       "OFPPT - Institut Spécialisé de Technologie Appliquée - Tafraout",
       "OFPPT - Specialized Institute of Applied Technology - Tafraout",
+    ],
+    certification: [
+      "Certificat en Programme d'Innovation Entrepreneuriale (PIE)",
+      "Certificate in Programme d'Innovation Entrepreneuriale (PIE)"  
     ],
   },
   {

@@ -14,13 +14,23 @@ import { useSelector } from "react-redux";
 export default function Header() {
   const myInformation = useSelector((state) => state.persoInfo);
   const DarkMode = useSelector((store) => store.DarkMode);
+  const language = useSelector((store) => store.language);
+  
 
   const [myInfo, setMyInfo] = useState(myInformation);
-  const texts = [
+
+
+  const texts = language === 'Fr' ? 
+  [
     myInfo.speciality[0][0],
     myInfo.speciality[1][0],
     myInfo.speciality[2][0],
+  ] : [
+    myInfo.speciality[0][1],
+    myInfo.speciality[1][1],
+    myInfo.speciality[2][1],
   ];
+
   const [currentText, setCurrentText] = useState("");
   const [fullText, setFullText] = useState(texts[0]);
   const [index, setIndex] = useState(0);
@@ -58,7 +68,7 @@ export default function Header() {
           </h1>
           <div className="text-black mb-4 font-bold tracking-wider mt-8 flex items-end ">
             <span className="font-light text-3xl mr-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
-              je suis
+              {language == 'Fr' ? "je suis" : "I'm"}
             </span>{" "}
             <span className="animated-text text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {currentText}
@@ -70,13 +80,13 @@ export default function Header() {
             <span className="mr-1 text-primary">
               <IoLocationSharp />
             </span>{" "}
-            <span className="text-primary mr-2 font-light">Based in</span>{" "}
-           <span className={`${DarkMode ? 'text-white' : 'text-black'}`}> {myInfo.basePlace[0]}</span>
+            <span className="text-primary mr-2 font-light">{language == 'Fr' ? "basé à": "Based in"}</span>{" "}
+           <span className={`${DarkMode ? 'text-white' : 'text-black'}`}> {language == 'Fr' ? myInfo.basePlace[0] : myInfo.basePlace[1]}</span>
           </div>
           <div className="text-black flex items-center">
             {" "}
             <div className="w-3 h-3 rounded-full bg-green-500 mr-2 online-dot"></div>
-            <span className={`${DarkMode ? 'text-white' : 'text-black' }`}>{myInfo.status[0]} </span>
+            <span className={`${DarkMode ? 'text-white' : 'text-black' }`}>{language == 'Fr' ? myInfo.status[0] : myInfo.status[1] } </span>
           </div>
           <div className=" flex items-center mt-10">
             <a 
@@ -87,7 +97,7 @@ export default function Header() {
               <Button
                 className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary"
               >
-                Download CV{" "}
+                {language == 'Fr' ? 'Télécharger CV' : 'Download CV'}
                 <span className="ml-2 text-2xl ">
                   {" "}
                   <MdDownload />{" "}
@@ -100,7 +110,8 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <Button className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
-                Get in Touch{" "}
+                {language == 'Fr' ? 'Contact' : 'Get in Touch'}
+
                 <span className="ml-2 text-2xl ">
                   <SiSocialblade />{" "}
                 </span>
@@ -128,7 +139,7 @@ export default function Header() {
                         {" "}
                         <GiFeather className="mr-2 fill-primary" />
                       </span>{" "}
-                      <span className="font-light">{item[0]} </span>
+                      <span className="font-light">{language == 'Fr' ? item[0] : item[1] } </span>
                     </div>
                   </>
                 );
