@@ -1,18 +1,21 @@
 import { Button } from "@material-tailwind/react";
 import { useState } from "react";
 import { FiGithub } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 export default function CardProject({ projects }) {
+  const DarkMode = useSelector((store) => store.DarkMode);
+
   return (
     <>
       {projects.length > 0 ? (
         projects.map((project, projectIndex) => (
           <div
             key={projectIndex}
-            className="m-2 px-4 rounded relative bg-gray-100 hover:bg-gray-50 hover:shadow-lg hover:border transition-all duration-500"
+            className={`${DarkMode ? 'bg-gray-800 hover:bg-gray-900' : 'bg-gray-100 hover:bg-gray-50' } m-2 px-4 rounded relative hover:shadow-lg hover:border transition-all duration-500`}
           >
             <div className="py-6 flex justify-between items-center ">
-              <span className="text-xl font-bold text-gray-600 w-11/12 ">
+              <span className={`${DarkMode ? 'text-gray-400' : 'text-gray-600' } text-xl font-bold w-11/12`}>
                 {project?.title[0]}
               </span>
               <div
@@ -43,7 +46,7 @@ export default function CardProject({ projects }) {
               })}
             </div>
 
-            <div className="text-gray-500 py-2 ">{project?.description[0]}</div>
+            <div className={`${DarkMode ? 'text-gray-400' : 'text-gray-500' }  py-2 `} >{project?.description[0]}</div>
 
             <div className="py-6 flex justify-between items-center ">
               <a

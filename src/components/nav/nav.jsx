@@ -45,6 +45,8 @@ export default function Nav() {
     dispatch(setDarkMode());
     localStorage.setItem("darkmode", JSON.stringify(newDarkMode)); // Store new value in localStorage
   };
+
+
   return (
     <div className="navbar shadow-lg py-4 flex justify-between items-center px-8 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
@@ -57,11 +59,11 @@ export default function Nav() {
           <span className="text-primary hover:text-primary transition-all duration-300">
             <PiOrangeLight />
           </span>
-          <span className={`${DarkMode ? "text-white" : "text-black" }`}>uaaddi</span>
+          <span className={`${DarkMode ? "text-white" : "text-black" } hover:text-primary transition-all duration-300`}>uaaddi</span>
         </span>
       </a>
       <div className="flex justify-between items-center px-4">
-        <div className="flex justify-between items-center border-r border-black mr-3 py-1 px-3">
+        <div className={`${DarkMode ? 'border-r border-white' : 'border-r border-black' } flex justify-between items-center mr-3 py-1 px-3`}>
           <a
             href={myInformation.mySocialMediaLinks.github}
             target="_blank"

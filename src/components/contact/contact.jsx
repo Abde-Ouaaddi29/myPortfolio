@@ -10,12 +10,13 @@ import { useSelector } from "react-redux";
 
 export default function Contact() {
   const myInformation = useSelector((state) => state.persoInfo);
+  const DarkMode = useSelector((store) => store.DarkMode);
+
 
   return (
-    <div id="contact" className="py-10 ">
+    <div id="contact" className={`${DarkMode ? 'text-white' : 'text-dark'} py-10 `} >
       <ParticlesComponent />
-
-      <div className="p-2 text-center text-4xl font-bold">Get in Touch</div>
+      <div className={` p-2 text-center text-4xl font-bold`} >Get in Touch</div>
       <div className="text-center py-16">
         <div className=" font-light tracking-wider mb-5">
           {myInformation.basePlace[0]}

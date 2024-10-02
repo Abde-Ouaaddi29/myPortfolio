@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
   const myInformation = useSelector((state) => state.persoInfo);
+  const DarkMode = useSelector((store) => store.DarkMode);
 
   const [myInfo, setMyInfo] = useState(myInformation);
   const texts = [
@@ -46,13 +47,13 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="px-10 relative bg-black bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)]  "
+      className="px-10 relative bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)]"
     >
       <ParticlesComponent />
 
       <div className="flex justify-between items-center h-[110vh] relative">
         <div className="relative w-5/12 ">
-          <h1 className="text-4xl tracking-wider text-black ">
+          <h1 className={`${DarkMode ? 'text-white' : 'text-black' } text-4xl tracking-wider `}>
             {myInfo.fullName}
           </h1>
           <div className="text-black mb-4 font-bold tracking-wider mt-8 flex items-end ">
@@ -62,6 +63,7 @@ export default function Header() {
             <span className="animated-text text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {currentText}
             </span>
+            
           </div>
           <div className="text-black text-xl mb-4 font-bold flex items-center">
             {" "}
@@ -69,19 +71,18 @@ export default function Header() {
               <IoLocationSharp />
             </span>{" "}
             <span className="text-primary mr-2 font-light">Based in</span>{" "}
-            {myInfo.basePlace[0]}
+           <span className={`${DarkMode ? 'text-white' : 'text-black'}`}> {myInfo.basePlace[0]}</span>
           </div>
           <div className="text-black flex items-center">
             {" "}
             <div className="w-3 h-3 rounded-full bg-green-500 mr-2 online-dot"></div>
-            {myInfo.status[0]}
+            <span className={`${DarkMode ? 'text-white' : 'text-black' }`}>{myInfo.status[0]} </span>
           </div>
           <div className=" flex items-center mt-10">
             <a 
              href={myInfo.cv[0]} 
              target="_blank" 
              rel="noopener noreferrer" 
-           
             >
               <Button
                 className="bg-primary tracking-wider rounded-none font-normal text-[15px] py-3 px-4 mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary"
@@ -117,7 +118,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="text-black w-3/12 ml-2 ">
+        <div className={`${DarkMode ? 'text-white' : 'text-black'} " w-3/12 ml-2 "`}>
           {myInfo.myFeatures
             ? myInfo.myFeatures.map((item, index) => {
                 return (

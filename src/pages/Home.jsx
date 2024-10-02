@@ -9,20 +9,26 @@ import Experience from "../components/experiences/experience";
 import { useSelector } from "react-redux";
 
 export default function Home() {
-  const store = useSelector((store) => store.DarkMode)
-  console.log(store)
-  
+  const DarkMode = useSelector((store) => store.DarkMode);
+
   return (
-    <div className="relative">
-      <div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_0.3px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_0.3px)] bg-[size:6rem_4rem]"></div>
-      {/* <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div> */}
+    <div
+      className={`${
+        DarkMode ? "bg-black" : "bg-white"
+      } relative z-10 `}
+    >
+      {!DarkMode ? (
+        <div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_0.5px,transparent_0.4px),linear-gradient(to_bottom,#f0f0f0_0.5px,transparent_0.4px)] bg-[size:6rem_4rem]"></div>
+      ) : (
+        ""
+      )}
       <Header />
       <Technologies />
       <Experience />
       <Project />
       <Education />
       <Contact />
-      <div className="p-3 bg-white text-gray-500 text-center">
+      <div className={`${DarkMode ? 'bg-black' : 'bg-white'} p-3 text-gray-500 text-center`}>
         ©2024 Ouaaddi Abderrahim. All rights reserved.
       </div>
     </div>

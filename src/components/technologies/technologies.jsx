@@ -20,10 +20,11 @@ import { FaDocker } from "react-icons/fa";
 import { SiUml } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiSonarqube } from "react-icons/si";
-
+import { useSelector } from "react-redux";
 
 export default function Technologies() {
   const [tech, setTech] = useState();
+  const DarkMode = useSelector((store) => store.DarkMode);
 
   const Mouse = (e) => {
     console.log(e);
@@ -80,7 +81,7 @@ export default function Technologies() {
     />,
     <SiExpress
       onMouseEnter={() => Mouse("Express-js")}
-      className="fill-black text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
+      className="fill-gray-600 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
     />,
     <FaNode
       onMouseEnter={() => Mouse("Node-js")}
@@ -96,7 +97,7 @@ export default function Technologies() {
     />,
     <FaSquareGithub
       onMouseEnter={() => Mouse("Github")}
-      className="text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
+      className="text-8xl  fill-gray-700 flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
     />,
     <SiRedux
     onMouseEnter={() => Mouse("Redux")}
@@ -127,13 +128,14 @@ export default function Technologies() {
 
   const [technologies, setTechnologies] = useState(TechnologiesList);
 
+  
 
   return (
     <>
-      <div className="px-10 my-10 bg-white shadow-xl shadow-white">
+      <div className={`${DarkMode ? 'bg-black shadow-black' : 'bg-white shadow-white'} px-10 my-10  shadow-xl `}>
         <div className="flex justify-between items-center text-black ">
           <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
-          <div className="text-4xl font-bold tracking-wide">Technologies</div>
+          <div className={`${DarkMode ? 'text-white' : 'text-black' } text-4xl font-bold tracking-wide`}>Technologies</div>
           <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
         </div>
 

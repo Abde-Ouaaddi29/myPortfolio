@@ -40,6 +40,7 @@ import hospital2 from "../assets/pieMedical.png";
 import portfolio from "../assets/portfolio.png";
 
 
+
 export const projectList = [
   {
     id: "234",

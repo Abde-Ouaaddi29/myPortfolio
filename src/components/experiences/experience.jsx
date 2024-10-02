@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { experiencesList } from "../../constants/constants";
+import { useSelector } from "react-redux";
 
 export default function Experience() {
   const [experiences, setExperiences] = useState(experiencesList);
+  const DarkMode = useSelector((store) => store.DarkMode);
+
   console.log(experiences);
 
   return (
     <div className="px-10 py-20 relative ">
-      <div className="flex justify-between items-center text-black ">
+      <div className="flex justify-between items-center ">
         <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
-        <div className="text-4xl font-bold tracking-wide">Experience</div>
+        <div className={`${DarkMode ? 'text-white' : 'text-black'} text-4xl font-bold tracking-wide`}>Experience</div>
         <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
@@ -32,7 +35,7 @@ export default function Experience() {
                       <h3 className="text-primary font-semibold mb-1">
                         {experience?.date[0]}
                       </h3>
-                      <h4 className="text-2xl font-semibold mb-2">
+                      <h4 className={`${DarkMode ? 'text-white' : 'text-black' } text-2xl font-semibold mb-2`}>
                         {experience?.title[0]}
                       </h4>
                       <h5 className="text-gray-600 text-xl font-semibold my-4">
