@@ -16,10 +16,7 @@ export default function Experience() {
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-          initial={{ opacity: 1, y: -100 }}
-          animate={{ opacity: 2, y: 1 }}
-          exit={{ opacity: 1, y: 20 }}
+          initial={{ opacity: 1, y: -70 }}
           transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
@@ -36,11 +33,9 @@ export default function Experience() {
             return (
               <>
                 <motion.div
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-                  initial={{ x: "-180vw", opacity: 0 }}
-                  animate={{ x: 0, opacity: 2 }}
-                  transition={{ duration: 1, type: "spring", stiffness: 40 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   initial={{ x: -200, opacity: 0 }}
+                   transition={{ duration: 0.9, type: "spring", stiffness: 50 }}
                   className="flex flex-col items-start  "
                 >
                   <div className="flex relative py-1 xl:w-6/12 lg:w-6/12 w-full m-auto ">

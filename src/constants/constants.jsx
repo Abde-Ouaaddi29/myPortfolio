@@ -1,4 +1,5 @@
 ////////// React icons /////////
+import React from "react";  // Import React
 
 import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
@@ -204,8 +205,8 @@ export const projectList = [
 
 import img from "../assets/imgRbg.png";
 import about2 from "../assets/header2.jpg";
-import Cv_Fr from "../../public/ABDERRAHIM_OUAADDI_CV_english.pdf";
-import Cv_En from "../../public/ABDERRAHIM_OUAADDI_french.pdf";
+import Cv_Fr from "../assets/ABDERRAHIM_OUAADDI_CV_en.pdf";
+import Cv_En from "../assets/ABDERRAHIM_OUAADDI_CV_fr.pdf";
 
 export const myInfoList = {
   fullName: "ABDERRAHIM OUAADDI",

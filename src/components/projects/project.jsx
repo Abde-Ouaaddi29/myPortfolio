@@ -23,10 +23,7 @@ export default function Project() {
             <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-              initial={{ opacity: 1, y: -100 }}
-              animate={{ opacity: 2, y: 1 }}
-              exit={{ opacity: 1, y: 20 }}
+              initial={{ opacity: 1, y: -80 }}
               transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
               className={`${
                 DarkMode ? "text-white" : "text-black"
@@ -38,9 +35,14 @@ export default function Project() {
           </div>
         </div>
 
-        <div className=" xl:py-14 lg:py-14 py-5 xl:px-10 lg:px-10 px-2  grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 1, y: 100 }}
+          transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
+          className=" xl:py-14 lg:py-14 py-5 xl:px-10 lg:px-10 px-2  grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8"
+        >
           <CardProject projects={projects} />
-        </div>
+        </motion.div>
       </div>
     </>
   );

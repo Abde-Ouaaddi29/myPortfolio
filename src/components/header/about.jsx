@@ -12,11 +12,8 @@ export default function About({ myInfo }) {
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-          initial={{ opacity: 1, y: -100 }}
-          animate={{ opacity: 2, y: 1 }}
-          exit={{ opacity: 1, y: 20 }}
-          transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
           } lg:text-4xl xl:text-4xl text-2xl mx-4 font-bold tracking-wide`}
@@ -27,8 +24,8 @@ export default function About({ myInfo }) {
       </div>
       <div className="flex flex-wrap justify-between items-center py-20">
         <motion.div
-          initial={{ opacity: 1, x: "-100vh" }}
-          animate={{ opacity: 2, x: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: -90, opacity: 0 }}
           transition={{ duration: 1, type: "spring", stiffness: 30 }}
           className=" lg:w-5/12 w-full lg:mb-0 xl:mb-0 mb-10"
         >
@@ -47,9 +44,7 @@ export default function About({ myInfo }) {
             DarkMode ? "text-white" : "text-black"
           }  tracking-wide z-50 text-xl lg:w-7/12 xl:w-7/12 w-full lg:mt-0 xl:mt-0 mt-8 `}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-          initial={{ x: "150vh", opacity: 0 }} // Starts off-screen to the left
-          animate={{ x: 0, opacity: 2 }} // Animates into its normal position
+          initial={{ y: 90, opacity: 0 }}
           transition={{ duration: 1, type: "spring", stiffness: 30 }}
         >
           <span>

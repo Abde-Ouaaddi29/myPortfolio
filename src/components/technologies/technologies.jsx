@@ -140,10 +140,7 @@ export default function Technologies() {
           <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12  h-[0.2px] bg-orange-500"></div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            initial={{ opacity: 1, y: -100 }}
-            animate={{ opacity: 2, y: 1 }}
-            exit={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 1, y: -70 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
             className={`${
               DarkMode ? "text-white" : "text-black"
@@ -169,13 +166,11 @@ export default function Technologies() {
                 <>
                   <motion.ul
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
-                    initial={{ opacity: 0, y: 200 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 1, y: 100 }}
                     transition={{
-                      duration: 0.9,
+                      duration: 1.5,
                       type: "spring",
-                      stiffness: 10,
+                      stiffness: 30,
                     }}
                     key={index}
                   >

@@ -22,10 +22,7 @@ export default function Contact() {
       <ParticlesComponent />
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
         initial={{ opacity: 1, y: -100 }}
-        animate={{ opacity: 2, y: 1 }}
-        exit={{ opacity: 1, y: 20 }}
         transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
         className={` p-2 text-center tracking-wider xl:text-4xl lg:text-4xl text-3xl font-bold`}
       >
@@ -33,10 +30,7 @@ export default function Contact() {
       </motion.div>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
         initial={{ opacity: 1, y: 100 }}
-        animate={{ opacity: 2, y: 1 }}
-        exit={{ opacity: 1, y: 20 }}
         transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
         className="text-center py-16"
       >

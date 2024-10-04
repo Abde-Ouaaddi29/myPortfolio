@@ -13,6 +13,7 @@ export default function CardProject({ projects }) {
       {projects.length > 0 ? (
         projects.map((project, projectIndex) => (
           <div
+          
             key={projectIndex}
             className={`${DarkMode ? 'bg-gray-800 hover:bg-gray-900' : 'bg-gray-100 hover:bg-gray-50' } m-2 px-4 rounded relative hover:shadow-lg hover:border transition-all duration-500`}
           >
