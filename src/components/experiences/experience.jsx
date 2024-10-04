@@ -7,27 +7,32 @@ export default function Experience() {
   const DarkMode = useSelector((store) => store.DarkMode);
   const language = useSelector((store) => store.language);
 
-
   console.log(experiences);
 
   return (
-    <div className="px-10 py-20 relative ">
-      <div className="flex justify-between items-center ">
-        <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
-        <div className={`${DarkMode ? 'text-white' : 'text-black'} text-4xl font-bold tracking-wide`}>Experience</div>
-        <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
+    <div className=" xl:py-20 lg:py-20 py-10 relative ">
+      <div className="flex justify-between items-center px-10 lg:px-20 xl:px-20">
+        <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
+        <div
+          className={`${
+            DarkMode ? "text-white" : "text-black"
+          } lg:text-4xl xl:text-4xl text-2xl mx-4 font-bold tracking-wide`}
+        >
+          Experience
+        </div>
+        <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
-      <div className="py-10">
+      <div className="lg:py-10 xl:py-10 py-12 px-8 lg:px-20 xl:px-20">
         {experiences.length > 0 ? (
           experiences.map((experience) => {
             return (
               <>
                 <div
                   key={experience.id}
-                  className="flex flex-col items-start  "
+                  className="flex flex-col items-start "
                 >
-                  <div className="flex relative py-2 w-10/12 m-auto ">
+                  <div className="flex relative py-2 lg:w-10/12 xl:w-10/12 w-full m-auto ">
                     <div className="flex flex-col items-center mr-8">
                       <div className="w-4 h-4 bg-primary rounded-full mb-2"></div>
                       <div className="border-l-2 border-gray-300 h-full"></div>
@@ -35,29 +40,42 @@ export default function Experience() {
 
                     <div className="pb-8">
                       <h3 className="text-primary font-semibold mb-1">
-                        {language == 'Fr' ? experience?.date[0] : experience?.date[1]}
+                        {language == "Fr"
+                          ? experience?.date[0]
+                          : experience?.date[1]}
                       </h3>
-                      <h4 className={`${DarkMode ? 'text-white' : 'text-black' } text-2xl font-semibold mb-2`}>
-                        {language == 'Fr' ? experience?.title[0] : experience?.title[1]}
-
+                      <h4
+                        className={`${
+                          DarkMode ? "text-white" : "text-black"
+                        } lg:text-2xl xl:text-2xl text-xl font-semibold mb-2`}
+                      >
+                        {language == "Fr"
+                          ? experience?.title[0]
+                          : experience?.title[1]}
                       </h4>
-                      <h5 className="text-gray-600 text-xl font-semibold my-4">
-                      {language == 'Fr' ? experience?.company[0] : experience?.company[1]}
+                      <h5 className="text-gray-600 xl:text-xl lg:text-xl font-semibold my-4">
+                        {language == "Fr"
+                          ? experience?.company[0]
+                          : experience?.company[1]}
                       </h5>
                       <ul className="list-disc ml-6 text-gray-700">
-                        {experience.roles[language == 'Fr' ? 0 : 1].map((role) => {
-                          return (
-                            <>
-                              <li className="mb-2 text-xl text-gray-500">
-                                {role}
-                              </li>
-                            </>
-                          );
-                        })}
+                        {experience.roles[language == "Fr" ? 0 : 1].map(
+                          (role) => {
+                            return (
+                              <>
+                                <li className="mb-2 lg:text-xl xl:text-xl text-gray-500">
+                                  {role}
+                                </li>
+                              </>
+                            );
+                          }
+                        )}
                       </ul>
 
-                      <h5 className="text-gray-600 text-xl font-semibold my-4">
-                        {language == 'Fr' ? 'Technologies Utilisées' : 'Used Technologies'}
+                      <h5 className="text-gray-600 lg:text-xl xl:text-xl font-semibold my-4">
+                        {language == "Fr"
+                          ? "Technologies Utilisées"
+                          : "Used Technologies"}
                       </h5>
                       <ul className="list-disc ml-6  text-gray-700">
                         {experience?.technologies.map((tech, key) => {

@@ -100,9 +100,9 @@ export default function Technologies() {
       className="text-8xl  fill-gray-700 flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
     />,
     <SiRedux
-    onMouseEnter={() => Mouse("Redux")}
-    className="fill-purple-500 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
-  />,
+      onMouseEnter={() => Mouse("Redux")}
+      className="fill-purple-500 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
+    />,
     <FaPython
       onMouseEnter={() => Mouse("Python")}
       className="fill-green-600 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
@@ -111,11 +111,11 @@ export default function Technologies() {
       onMouseEnter={() => Mouse("Docker")}
       className="fill-blue-400 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
-   
+
     <SiUml
-    onMouseEnter={() => Mouse("UML")}
-    className="fill-gray-500 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down "
-  />,
+      onMouseEnter={() => Mouse("UML")}
+      className="fill-gray-500 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down "
+    />,
     <SiSonarqube
       onMouseEnter={() => Mouse("sonarqube | testing code quality")}
       className="fill-blue-300 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
@@ -128,15 +128,23 @@ export default function Technologies() {
 
   const [technologies, setTechnologies] = useState(TechnologiesList);
 
-  
-
   return (
     <>
-      <div className={`${DarkMode ? 'bg-black shadow-black' : 'bg-white shadow-white'} px-10 my-10  shadow-xl `}>
-        <div className="flex justify-between items-center text-black ">
-          <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
-          <div className={`${DarkMode ? 'text-white' : 'text-black' } text-4xl font-bold tracking-wide`}>Technologies</div>
-          <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
+      <div
+        className={`${
+          DarkMode ? "bg-black shadow-black" : "bg-white shadow-white"
+        } lg:px-10 xl:px-10 xl:my-10 lg:my-10 my-2 shadow-xl `}
+      >
+        <div className="flex justify-between items-center text-black px-10">
+          <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12  h-[0.2px] bg-orange-500"></div>
+          <div
+            className={`${
+              DarkMode ? "text-white" : "text-black"
+            } lg:text-4xl xl:text-4xl text-2xl font-bold mx-4 tracking-wide`}
+          >
+            Technologies
+          </div>
+          <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         </div>
 
         {tech ? (
@@ -152,7 +160,7 @@ export default function Technologies() {
             {technologies.map((item, index) => {
               return (
                 <>
-                  <ul key={index} >{item}</ul>
+                  <ul key={index}>{item}</ul>
                 </>
               );
             })}

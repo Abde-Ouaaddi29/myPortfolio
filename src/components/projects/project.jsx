@@ -18,15 +18,15 @@ export default function Project() {
       >
         <div className="px-10 mb-6">
           <div className="flex justify-between items-center ">
-            <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
-            <div className={`${DarkMode ? 'text-white' : 'text-black'} text-4xl font-bold tracking-wide`}>
-              Projects & work
+            <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
+            <div className={`${DarkMode ? 'text-white' : 'text-black'} lg:text-4xl xl:text-4xl text-2xl mx-4 font-bold tracking-wide`}>
+              Projects
             </div>
-            <div className="w-4/12 h-[0.2px] bg-orange-500"></div>
+            <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
           </div>
         </div>
 
-        <div className=" py-14 px-10 grid grid-cols-2 gap-8">
+        <div className=" py-14 px-10 grid lg:grid-cols-2 grid-cols-1 gap-8">
           <CardProject projects={projects} />
         </div>
       </div>

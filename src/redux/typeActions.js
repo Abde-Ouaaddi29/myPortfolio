@@ -1,6 +1,7 @@
 export const SET_DARKMODE = 'SET_DARKMODE';
 export const SET_MYINFO = 'SET_MYINFO';
 export const SET_LANG = 'SET_LANG';
+export const OPEN_CARD = 'OPEN_CARD';
 
 
 export const setDarkMode = (value) => {
@@ -16,6 +17,13 @@ export const setLang = (lang) => {
         payload:lang
     }
 }
+
+export const opencard = () => {
+    return {
+        type:OPEN_CARD
+    }
+}
+
 
 // export const setInfo = (data) => {
 //     return {

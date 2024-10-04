@@ -1,19 +1,20 @@
 import { myInfoList } from "../constants/constants"
-import { SET_DARKMODE, SET_LANG } from "./typeActions"
+import { OPEN_CARD, SET_DARKMODE, SET_LANG } from "./typeActions"
 
 const initialStates = { 
   persoInfo : myInfoList,
   DarkMode : false,
-  language : 'Fr'
+  language : 'Fr',
+  openCard : false
 }
 
 export const GeneralReducer = (state = initialStates, action) => {
 
   switch(action.type) {
-    // case SET_MYINFO:
-    //   return {
-    //     ...state, persoInfo:action.payload
-    //   }
+    case OPEN_CARD:
+      return {
+        ...state, openCard: !state.openCard
+      }
 
       case SET_LANG:
       return {

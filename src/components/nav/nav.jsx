@@ -10,14 +10,19 @@ import { GiMoonBats } from "react-icons/gi";
 import { IoSunnyOutline } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode, setLang } from "../../redux/typeActions";
+import { opencard, setDarkMode, setLang } from "../../redux/typeActions";
 import { useEffect } from "react";
+import { IoMdClose } from "react-icons/io";
+import { MdFilterList } from "react-icons/md";
+
 import { useState } from "react";
 
 export default function Nav() {
   const lang = useSelector((store) => store.language);
   const DarkMode = useSelector((store) => store.DarkMode);
   const myInformation = useSelector((state) => state.persoInfo);
+  const opened = useSelector((state) => state.openCard);
+  // const [opened , setOpened] = useState(false)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -46,25 +51,33 @@ export default function Nav() {
     localStorage.setItem("darkmode", JSON.stringify(newDarkMode)); // Store new value in localStorage
   };
 
+  const HandleOpen = () => {
+    // setOpened(prev => !prev)
+    dispatch(opencard())
+  }
+
+  console.log(opened)
 
   return (
-    <div className="navbar shadow-lg py-4 flex justify-between items-center px-8 fixed top-0 left-0 right-0 z-50">
+    <div className="navbar shadow-lg lg:py-2 py-3 flex justify-between items-center lg:px-8 px-10 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
         <img
-          className="w-10 h-10 hover:text-primary transition-all duration-300"
+          className="lg:w-10 lg:h-10 w-7 h-7 mr-3 hover:text-primary transition-all duration-300"
           src={logo}
           alt="Abde"
         />
-        <span className="text-2xl flex justify-center items-center font-light tracking-wider hover:text-primary transition-all duration-300">
+      
+        <span className="lg:text-2xl text-xl flex justify-center items-center font-light tracking-wider hover:text-primary transition-all duration-300">
           <span className="text-primary hover:text-primary transition-all duration-300">
             <PiOrangeLight />
           </span>
           <span className={`${DarkMode ? "text-white" : "text-black" } hover:text-primary transition-all duration-300`}>uaaddi</span>
         </span>
       </a>
-      <div className="flex justify-between items-center px-4">
-        <div className={`${DarkMode ? 'border-r border-white' : 'border-r border-black' } flex justify-between items-center mr-3 py-1 px-3`}>
-          <a
+      <div onClick={HandleOpen} className=" lg:hidden">{opened ? <IoMdClose className={` ${DarkMode ? 'text-white' : 'text-black' } w-7 h-7  `}/> : <MdFilterList className={` ${DarkMode ? 'text-white' : 'text-black' } w-7 h-7  `}/> }</div>
+      <div className={`${opened ? `${DarkMode ? ' bg-white' : ' bg-black'}` : 'hidden'} FlueBack lg:flex lg:justify-between lg:items-center lg:px-4 p-4 bg-opacity-25  lg:relative absolute lg:top-0 lg:right-0 top-20 right-32 lg:rounded-none rounded-xl`} >
+      <div className={`${DarkMode ? 'lg:border-r lg:border-white' : 'lg:border-r lg:border-black' }  flex flex-col justify-between items-center lg:flex-row lg:justify-between lg:items-center lg:mr-3 py-1 px-3`}>
+      <a
             href={myInformation.mySocialMediaLinks.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -72,7 +85,7 @@ export default function Nav() {
             <BsGithub
               className={`text-2xl ${
                 DarkMode ? "text-white" : "text-black"
-              } hover:text-primary transition-all duration-300`}
+              } hover:text-primary transition-all duration-300 lg:mb-0 mb-3`}
             />
           </a>
           <div className="px-6">
@@ -84,7 +97,7 @@ export default function Nav() {
               <FaLinkedin
                 className={`text-2xl ${
                   DarkMode ? "text-white" : "text-black"
-                } hover:text-primary transition-all duration-300`}
+                } hover:text-primary transition-all duration-300 lg:mb-0 mb-3`}
               />
             </a>
           </div>
@@ -97,11 +110,11 @@ export default function Nav() {
               <MdEmail
                 className={`text-2xl ${
                   DarkMode ? "text-white" : "text-black"
-                } hover:text-primary transition-all duration-300`}
+                } hover:text-primary transition-all duration-300 lg:mb-0 mb-3`}
               />
             </a>
           </div>
-          <div className="px-6">
+          <div className="px-6 ">
             <a
               href={myInformation.mySocialMediaLinks.upwork}
               target="_blank"
@@ -115,12 +128,12 @@ export default function Nav() {
             </a>
           </div>
         </div>
-        <div className="flex justify-between items-center">
-          <div onClick={HandleDarkMode} className="px-4">
+        <div className="flex lg:justify-between items-center justify-around mt-2 lg:mt-0 py-2 lg:py-0 ">
+          <div onClick={HandleDarkMode} className="lg:px-4">
             {!DarkMode ? (
               <GiMoonBats className="text-2xl text-black hover:text-blue-gray-600 transition-all duration-300 cursor-pointer" />
             ) : (
-              <IoSunnyOutline className="text-2xl text-primary hover:text-orange-400 transition-all duration-300 cursor-pointer" />
+              <IoSunnyOutline className="text-2xl text-yellow-200 hover:text-orange-400 transition-all duration-300 cursor-pointer" />
             )}
           </div>
           <div
