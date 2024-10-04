@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { educationList } from "../../constants/constants";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   const [educations, setEducations] = useState(educationList);
@@ -13,13 +14,19 @@ export default function Experience() {
     <div className="px-10 relative  py-10  ">
       <div className="flex justify-between items-center text-black ">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
-        <div
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+          initial={{ opacity: 1, y: -100 }}
+          animate={{ opacity: 2, y: 1 }}
+          exit={{ opacity: 1, y: 20 }}
+          transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
           } lg:text-4xl xl:text-4xl text-2xl font-bold tracking-wide`}
         >
           Education
-        </div>
+        </motion.div>
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
@@ -28,7 +35,14 @@ export default function Experience() {
           educations.map((education) => {
             return (
               <>
-                <div className="flex flex-col items-start  ">
+                <motion.div
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+                  initial={{ x: "-180vw", opacity: 0 }}
+                  animate={{ x: 0, opacity: 2 }}
+                  transition={{ duration: 1, type: "spring", stiffness: 40 }}
+                  className="flex flex-col items-start  "
+                >
                   <div className="flex relative py-1 xl:w-6/12 lg:w-6/12 w-full m-auto ">
                     <div className="flex flex-col items-center mr-8">
                       <div className="w-4 h-4 bg-primary rounded-full mb-2"></div>
@@ -69,7 +83,7 @@ export default function Experience() {
                       </h5>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </>
             );
           })

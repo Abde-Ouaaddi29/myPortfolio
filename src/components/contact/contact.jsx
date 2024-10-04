@@ -4,6 +4,7 @@ import { FaUpwork } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import ParticlesComponent from "../ParticlesComponent";
 import { useSelector } from "react-redux";
@@ -13,15 +14,36 @@ export default function Contact() {
   const DarkMode = useSelector((store) => store.DarkMode);
   const language = useSelector((store) => store.language);
 
-
-
   return (
-    <div id="contact" className={`${DarkMode ? 'text-white' : 'text-dark'} py-10 `} >
+    <div
+      id="contact"
+      className={`${DarkMode ? "text-white" : "text-dark"} py-10 `}
+    >
       <ParticlesComponent />
-      <div className={` p-2 text-center tracking-wider xl:text-4xl lg:text-4xl text-3xl font-bold`} >{language == 'Fr' ? 'Contactez-moi' : 'Get In Touch'}</div>
-      <div className="text-center py-16">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ opacity: 2, y: 1 }}
+        exit={{ opacity: 1, y: 20 }}
+        transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
+        className={` p-2 text-center tracking-wider xl:text-4xl lg:text-4xl text-3xl font-bold`}
+      >
+        {language == "Fr" ? "Contactez-moi" : "Get In Touch"}
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+        initial={{ opacity: 1, y: 100 }}
+        animate={{ opacity: 2, y: 1 }}
+        exit={{ opacity: 1, y: 20 }}
+        transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
+        className="text-center py-16"
+      >
         <div className=" font-light tracking-wider mb-5">
-          {language == 'Fr' ? myInformation.basePlace[0] : myInformation.basePlace[1]}
+          {language == "Fr"
+            ? myInformation.basePlace[0]
+            : myInformation.basePlace[1]}
         </div>
         <div className=" font-light tracking-wider mb-5">
           {myInformation.phone}
@@ -64,7 +86,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

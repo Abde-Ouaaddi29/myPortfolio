@@ -57,17 +57,17 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="lg:px-10 px-10 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
+      className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-10 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
     >
       <ParticlesComponent />
 
-      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:h-[110vh] h-[107vh] relative">
+      <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] h-[107vh] relative">
         <motion.div
-           whileInView={{ opacity: 1, x: 0 }} 
-           initial={{ x: -200, opacity: 0 }}
-           animate={{ x: 0, opacity: 1 }}
-           transition={{ duration: 0.9, type: "spring", stiffness: 50 }}
-          className="relative lg:w-5/12 md:w-7/12  w-full "
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+          initial={{ x: -200, opacity: 0 }}
+          transition={{ duration: 0.9, type: "spring", stiffness: 50 }}
+          className="relative lg:w-5/12 xl:w-6/12 md:w-6/12 sm:w-10/12 w-full "
         >
           <h1
             className={`${
@@ -133,7 +133,7 @@ export default function Header() {
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 , type: "spring", stiffness: 10 }}
+          transition={{ duration: 0.9, type: "spring", stiffness: 10 }}
           className="outline outline-green-500 outline-offset-4 animate-move rounded-full lg:w-[24rem] w-[15rem]  relative lg:m-6 my-7"
         >
           <div className="bg-gradient-wave animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
@@ -145,12 +145,14 @@ export default function Header() {
         </motion.div>
 
         <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
           initial={{ x: "100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: 1, type: "spring", stiffness: 50 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
-          } " lg:w-3/12 w-full lg:ml-2 mt-4 lg:mt-0  "`}
+          } " lg:w-5/12 xl:w-5/12 md:w-6/12 sm:w-8/12 w-full lg:ml-2 mt-4 lg:mt-0  "`}
         >
           {myInfo.myFeatures
             ? myInfo.myFeatures.map((item, index) => {

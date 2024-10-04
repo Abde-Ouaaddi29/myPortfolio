@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { experiencesList } from "../../constants/constants";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   const [experiences, setExperiences] = useState(experiencesList);
@@ -13,13 +14,19 @@ export default function Experience() {
     <div className=" xl:py-20 lg:py-20 py-10 relative ">
       <div className="flex justify-between items-center px-10 lg:px-20 xl:px-20">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
-        <div
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+          initial={{ opacity: 1, y: -100 }}
+          animate={{ opacity: 2, y: 1 }}
+          exit={{ opacity: 1, y: 20 }}
+          transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
           } lg:text-4xl xl:text-4xl text-2xl mx-4 font-bold tracking-wide`}
         >
           Experience
-        </div>
+        </motion.div>
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
@@ -28,8 +35,13 @@ export default function Experience() {
           experiences.map((experience) => {
             return (
               <>
-                <div
+                <motion.div
                   key={experience.id}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+                  initial={{ x: "-180vw", opacity: 0 }}
+                  animate={{ x: 0, opacity: 2 }}
+                  transition={{ duration: 1, type: "spring", stiffness: 50 }}
                   className="flex flex-col items-start "
                 >
                   <div className="flex relative py-2 lg:w-10/12 xl:w-10/12 w-full m-auto ">
@@ -90,7 +102,7 @@ export default function Experience() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </>
             );
           })

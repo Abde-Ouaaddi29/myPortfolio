@@ -62,7 +62,7 @@ export default function Nav() {
     <div className="navbar shadow-lg lg:py-2 py-3 flex justify-between items-center lg:px-8 px-10 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
         <img
-          className="lg:w-10 lg:h-10 w-7 h-7 mr-3 hover:text-primary transition-all duration-300"
+          className="lg:w-10 lg:h-10 w-7 h-7 mr-2 hover:text-primary transition-all duration-300"
           src={logo}
           alt="Abde"
         />
@@ -75,7 +75,7 @@ export default function Nav() {
         </span>
       </a>
       <div onClick={HandleOpen} className=" lg:hidden">{opened ? <IoMdClose className={` ${DarkMode ? 'text-white' : 'text-black' } w-7 h-7  `}/> : <MdFilterList className={` ${DarkMode ? 'text-white' : 'text-black' } w-7 h-7  `}/> }</div>
-      <div className={`${opened ? `${DarkMode ? ' bg-white' : ' bg-black'}` : 'hidden'} FlueBack lg:flex lg:justify-between lg:items-center lg:px-4 p-4 bg-opacity-25  lg:relative absolute lg:top-0 lg:right-0 top-20 right-32 lg:rounded-none rounded-xl`} >
+      <div className={`${opened ? `${DarkMode ? ' bg-white' : ' bg-black'}` : 'hidden'} FlueBack lg:flex lg:justify-between lg:items-center lg:px-4 p-4 bg-opacity-25  lg:relative absolute lg:top-0 lg:right-0 md:right-[55vh] sm:right-60 right-32 top-20 lg:rounded-none rounded-xl`} >
       <div className={`${DarkMode ? 'lg:border-r lg:border-white' : 'lg:border-r lg:border-black' }  flex flex-col justify-between items-center lg:flex-row lg:justify-between lg:items-center lg:mr-3 py-1 px-3`}>
       <a
             href={myInformation.mySocialMediaLinks.github}

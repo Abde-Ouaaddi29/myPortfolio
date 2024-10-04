@@ -1,9 +1,9 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
 import { GiOrangeSlice } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
-   
   return (
     <div className=" h-[100vh]  flex justify-center items-center bg-white">
       <div className=" p-4 flex-col text-center ">
@@ -23,7 +23,9 @@ export default function ErrorPage() {
             link you followed may be broken or the page has been moved. Please
             check the URL for any errors or return to the homepage.
           </p>
-          <Button className="bg-primary"> Back to Home page !</Button>
+          <Link to={'/'}>
+            <Button className="bg-primary"> Back to Home page !</Button>
+          </Link>
         </div>
       </div>
     </div>

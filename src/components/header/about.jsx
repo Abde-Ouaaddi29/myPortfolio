@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function About({ myInfo }) {
   const DarkMode = useSelector((store) => store.DarkMode);
@@ -11,6 +11,8 @@ export default function About({ myInfo }) {
       <div className="flex justify-between items-center text-black">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
           initial={{ opacity: 1, y: -100 }}
           animate={{ opacity: 2, y: 1 }}
           exit={{ opacity: 1, y: 20 }}
@@ -44,6 +46,8 @@ export default function About({ myInfo }) {
           className={`${
             DarkMode ? "text-white" : "text-black"
           }  tracking-wide z-50 text-xl lg:w-7/12 xl:w-7/12 w-full lg:mt-0 xl:mt-0 mt-8 `}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
           initial={{ x: "150vh", opacity: 0 }} // Starts off-screen to the left
           animate={{ x: 0, opacity: 2 }} // Animates into its normal position
           transition={{ duration: 1, type: "spring", stiffness: 30 }}

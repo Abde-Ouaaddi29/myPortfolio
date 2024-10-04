@@ -21,6 +21,7 @@ import { SiUml } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiSonarqube } from "react-icons/si";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 export default function Technologies() {
   const [tech, setTech] = useState();
@@ -135,15 +136,21 @@ export default function Technologies() {
           DarkMode ? "bg-black shadow-black" : "bg-white shadow-white"
         } lg:px-10 xl:px-10 xl:my-10 lg:my-10 my-2 shadow-xl `}
       >
-        <div className="flex justify-between items-center text-black px-10">
+        <div className="flex justify-between items-center px-10 text-black">
           <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12  h-[0.2px] bg-orange-500"></div>
-          <div
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            initial={{ opacity: 1, y: -100 }}
+            animate={{ opacity: 2, y: 1 }}
+            exit={{ opacity: 1, y: 20 }}
+            transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
             className={`${
               DarkMode ? "text-white" : "text-black"
             } lg:text-4xl xl:text-4xl text-2xl font-bold mx-4 tracking-wide`}
           >
             Technologies
-          </div>
+          </motion.div>
           <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         </div>
 
@@ -160,7 +167,20 @@ export default function Technologies() {
             {technologies.map((item, index) => {
               return (
                 <>
-                  <ul key={index}>{item}</ul>
+                  <motion.ul
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }} // Adjust threshold if needed
+                    initial={{ opacity: 0, y: 200 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.9,
+                      type: "spring",
+                      stiffness: 10,
+                    }}
+                    key={index}
+                  >
+                    {item}
+                  </motion.ul>
                 </>
               );
             })}
