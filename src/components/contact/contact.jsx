@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <div id="contact" className={`${DarkMode ? 'text-white' : 'text-dark'} py-10 `} >
       <ParticlesComponent />
-      <div className={` p-2 text-center tracking-wider text-4xl font-bold`} >{language == 'Fr' ? 'Contactez-moi' : 'Get In Touch'}</div>
+      <div className={` p-2 text-center tracking-wider xl:text-4xl lg:text-4xl text-3xl font-bold`} >{language == 'Fr' ? 'Contactez-moi' : 'Get In Touch'}</div>
       <div className="text-center py-16">
         <div className=" font-light tracking-wider mb-5">
           {language == 'Fr' ? myInformation.basePlace[0] : myInformation.basePlace[1]}

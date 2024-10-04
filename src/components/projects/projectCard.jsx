@@ -17,7 +17,7 @@ export default function CardProject({ projects }) {
             className={`${DarkMode ? 'bg-gray-800 hover:bg-gray-900' : 'bg-gray-100 hover:bg-gray-50' } m-2 px-4 rounded relative hover:shadow-lg hover:border transition-all duration-500`}
           >
             <div className="py-6 flex justify-between items-center ">
-              <span className={`${DarkMode ? 'text-gray-400' : 'text-gray-600' } text-xl font-bold w-11/12`}>
+              <span className={`${DarkMode ? 'text-gray-400' : 'text-gray-600' } lg:text-xl xl:text-xl font-bold w-11/12`}>
                 {language == 'Fr' ? project?.title[0] : project?.title[1]}
               </span>
               <div
@@ -48,7 +48,7 @@ export default function CardProject({ projects }) {
               })}
             </div>
 
-            <div className={`${DarkMode ? 'text-gray-400' : 'text-gray-500' }  py-2 `} >{language == 'Fr' ? project?.description[0] : project?.description[1]} </div>
+            <div className={`${DarkMode ? 'text-gray-400' : 'text-gray-500' } py-2 `} >{language == 'Fr' ? project?.description[0] : project?.description[1]} </div>
 
             <div className="py-6 flex justify-between items-center ">
               <a

@@ -26,7 +26,7 @@ export default function Project() {
           </div>
         </div>
 
-        <div className=" py-14 px-10 grid lg:grid-cols-2 grid-cols-1 gap-8">
+        <div className=" xl:py-14 lg:py-14 py-5 xl:px-10 lg:px-10 px-2  grid lg:grid-cols-2 grid-cols-1 gap-8">
           <CardProject projects={projects} />
         </div>
       </div>
