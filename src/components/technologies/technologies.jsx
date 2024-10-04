@@ -155,7 +155,7 @@ export default function Technologies() {
         </div>
 
         {tech ? (
-          <div className="border border-primary tracking-wide font-light text-primary absolute px-6 py-2 m-auto rounded-r-full ">
+          <div className="border mx-10 border-primary tracking-wide font-light text-primary absolute px-6 py-2 m-auto rounded-r-full ">
             {tech}
           </div>
         ) : (
