@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
-      external: ['redux'], 
+      external: ['react-router-dom'],
     },
   },
 })
