@@ -103,7 +103,17 @@
   position: relative; /* Keep this for correct positioning */
 }
 
+@keyframes floatEffect {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.04); /* Slightly larger */
+  }
+}
 
-
+.img-float {
+  animation: floatEffect 5s ease-in-out infinite; /* Adjust duration as needed */
+}
 
 

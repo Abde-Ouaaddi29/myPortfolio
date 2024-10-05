@@ -21,14 +21,13 @@ module.exports =withMT({
           '100%': { backgroundPosition: '0% 50%' },
         },
         move: {
-          '30%': { transform: 'translateY(20px)' },
-          '0%': { transform: 'translateX(0, 0)' },
-          '50%': { transform: 'translate(20px, 0)' },
-          '90%': { transform: 'translate(0, 0)' },
+          '0%': { transform: 'translate(0, 0)' }, // Starting position
+          '50%': { transform: 'translate(20px, 0)' }, // Move right
+          '100%': { transform: 'translate(0, 0)' }, // Back to start
         },
         moveLR: {
           '0%, 100%': { transform: 'translateY(10px)' }, // Original position
-          '50%': { transform: 'translateY(-10px)' },   // Move up by 20px
+          '50%': { transform: 'translateY(-30px)' },   // Move up by 20px
 
         },
 

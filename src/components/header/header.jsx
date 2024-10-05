@@ -56,29 +56,29 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-10 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
+      className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-6 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
     >
       <ParticlesComponent />
 
-      <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] h-[107vh] relative">
+      <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] xl:h-[110vh] h-[115vh] relative">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ y: -100, opacity: 0 }}
           transition={{ duration: 1, type: "spring", stiffness: 30 }}
-          className="relative lg:w-5/12 xl:w-6/12 md:w-6/12 sm:w-10/12 w-full "
+          className="relative lg:w-6/12 xl:w-6/12 md:w-6/12 sm:w-full w-full "
         >
           <h1
             className={`${
               DarkMode ? "text-white" : "text-black"
-            } lg:text-4xl text-2xl tracking-wider `}
+            } lg:text-3xl font-extrabold text-2xl tracking-wider `}
           >
             {myInfo.fullName}
           </h1>
-          <div className="text-black mb-4 font-bold tracking-wider lg:mt-8 mt-4 flex items-end ">
+          <div className="text-black mb-4 font-bold tracking-wider lg:mt-5 mt-3 flex items-end ">
             <span className="font-light lg:text-3xl text-xl mr-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {language == "Fr" ? "je suis" : "I'm"}
             </span>{" "}
-            <span className="animated-text lg:text-3xl text-xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
+            <span className="animated-text lg:text-3xl text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {currentText}
             </span>
           </div>
@@ -108,7 +108,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-primary tracking-wider rounded-none font-normal lg:text-[15px] lg:py-3 lg:px-4 px-3 py-2 lg:mr-5 mr-2 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
+              <Button className="bg-primary tracking-wider rounded-none font-normal lg:text-[15px] lg:py-3 lg:px-5 px-3 py-2 lg:mr-5 mr-3 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
                 {language == "Fr" ? "Téléchager CV" : "Download CV"}
                 <span className="ml-2 lg:text-2xl text-xl ">
                   {" "}
@@ -121,7 +121,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-primary tracking-wider rounded-none font-normal lg:text-[15px] lg:py-3 lg:px-4 px-3 py-2 lg:mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
+              <Button className="bg-primary tracking-wider rounded-none font-normal lg:text-[15px] lg:py-3 lg:px-5 px-3 py-2 lg:mr-5 text-white hover:border border-primary hover:bg-inherit transition-all duration-500 flex items-end hover:text-primary">
                 {language == "Fr" ? "Contact" : "Get in Touch"}
 
                 <span className="ml-2 lg:text-2xl text-xl ">
@@ -138,9 +138,9 @@ export default function Header() {
           transition={{ duration: 0.9, type: "spring", stiffness: 10 }}
           className="outline outline-green-500 outline-offset-4 animate-move rounded-full lg:w-[24rem] w-[15rem]  relative lg:m-6 my-7"
         >
-          <div className="bg-gradient-wave animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
+          <div className="bg-gradient-wave  animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
           <img
-            className="rounded-full lg:w-[24rem] w-[15rem] z-40 "
+            className="rounded-full lg:w-[24rem] w-[15rem] z-40 img-float"
             src={myInfo.myImage}
             alt=""
           />
@@ -152,7 +152,7 @@ export default function Header() {
           transition={{ duration: 1, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"
-          } " lg:w-5/12 xl:w-5/12 md:w-6/12 sm:w-8/12 w-full lg:ml-2 mt-4 lg:mt-0  "`}
+          } " lg:w-3/12 xl:w-3/12 md:w-3/12  sm:w-8/12 w-full lg:ml-2 mt-4 lg:mt-0  "`}
         >
           {myInfo.myFeatures
             ? myInfo.myFeatures.map((item, index) => {

@@ -59,7 +59,7 @@ export default function Nav() {
   console.log(opened)
 
   return (
-    <div className="navbar shadow-lg lg:py-2 py-3 flex justify-between items-center lg:px-8 px-10 fixed top-0 left-0 right-0 z-50">
+    <div className="navbar shadow-lg lg:py-2 py-3 flex justify-between items-center lg:px-8 px-6 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
         <img
           className="lg:w-10 lg:h-10 w-7 h-7 mr-2 hover:text-primary transition-all duration-300"

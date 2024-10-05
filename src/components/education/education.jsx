@@ -16,7 +16,7 @@ export default function Experience() {
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 1, y: -70 }}
+          initial={{ opacity: 1, y: -50 }}
           transition={{ duration: 1.5, type: "spring", stiffness: 30 }}
           className={`${
             DarkMode ? "text-white" : "text-black"

@@ -7,7 +7,7 @@ export default function About({ myInfo }) {
   const language = useSelector((store) => store.language);
 
   return (
-    <div className=" lg:mt-3 mt-0 ">
+    <div className=" lg:mt-3 mt-0 px-6 ">
       <div className="flex justify-between items-center text-black">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
