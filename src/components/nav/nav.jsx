@@ -62,7 +62,7 @@ export default function Nav() {
     <div className="navbar shadow-lg lg:py-2 py-3 flex justify-between items-center lg:px-8 px-6 fixed top-0 left-0 right-0 z-50">
       <a href="#" className="flex justify-between items-center cursor-pointer">
         <img
-          className="lg:w-10 lg:h-10 w-7 h-7 mr-2 hover:text-primary transition-all duration-300"
+          className="lg:w-10 lg:h-10 w-7 h-7 mr-0 hover:text-primary transition-all duration-300"
           src={logo}
           alt="Abde"
         />
