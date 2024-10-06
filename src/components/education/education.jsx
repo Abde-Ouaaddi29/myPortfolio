@@ -11,7 +11,7 @@ export default function Experience() {
   console.log(educations);
 
   return (
-    <div className="px-10 relative  py-10  ">
+    <div className="px-6 relative  py-10  ">
       <div className="flex justify-between items-center text-black ">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
@@ -27,18 +27,18 @@ export default function Experience() {
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
-      <div className="py-20">
+      <div className="xl:py-20 lg:py-20 py-14">
         {educations.length > 0 ? (
           educations.map((education) => {
             return (
               <>
                 <motion.div
-                   whileInView={{ opacity: 1, x: 0 }}
-                   initial={{ x: -200, opacity: 0 }}
-                   transition={{ duration: 0.9, type: "spring", stiffness: 50 }}
-                  className="flex flex-col items-start  "
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ x: -200, opacity: 0 }}
+                  transition={{ duration: 0.9, type: "spring", stiffness: 50 }}
+                  className="flex flex-col items-start"
                 >
-                  <div className="flex relative py-1 xl:w-6/12 lg:w-6/12 w-full m-auto ">
+                  <div className="flex relative py-1 xl:w-6/12 lg:w-6/12 w-full m-auto">
                     <div className="flex flex-col items-center mr-8">
                       <div className="w-4 h-4 bg-primary rounded-full mb-2"></div>
                       <div className="border-l-2 border-gray-300 h-full"></div>
@@ -48,31 +48,35 @@ export default function Experience() {
                       <h3 className="text-primary font-semibold mb-1">
                         {education?.year}
                       </h3>
-                      <div
+
+                      <ul
                         className={`${
                           DarkMode ? "text-gray-500" : "text-gray-800"
-                        } text-xl flex flex-col  font-semibold mb-2`}
+                        } list-none font-semibold mb-2`}
                       >
-                        <span>
-                          {" "}
-                          -{" "}
-                          {language == "Fr"
+                        {/* Degree List Item with Circle */}
+                        <li className="flex items-center mb-1">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mr-2"></div>{" "}
+                          {/* Circle */}
+                          {language === "Fr"
                             ? education?.degree[0]
                             : education?.degree[1]}
-                        </span>
-                        <span>
-                          {" "}
-                          {language == "Fr"
-                            ? education.certification
-                              ? "-" + " " + education.certification[0]
-                              : ""
-                            : education.certification
-                            ? "-" + " " + education.certification[1]
-                            : ""}
-                        </span>
-                      </div>
+                        </li>
+
+                        {/* Certification List Item with Circle (if exists) */}
+                        {education.certification && (
+                          <li className="flex items-center">
+                            <div className="w-2 h-2 bg-gray-600 rounded-full mr-2"></div>{" "}
+                            {/* Circle */}
+                            {language === "Fr"
+                              ? education.certification[0]
+                              : education.certification[1]}
+                          </li>
+                        )}
+                      </ul>
+
                       <h5 className="text-gray-600 font-semibold my-4">
-                        {language == "Fr"
+                        {language === "Fr"
                           ? education?.institution[0]
                           : education?.institution[1]}
                       </h5>

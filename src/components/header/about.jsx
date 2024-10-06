@@ -7,7 +7,7 @@ export default function About({ myInfo }) {
   const language = useSelector((store) => store.language);
 
   return (
-    <div className=" lg:mt-3 mt-0 px-6 ">
+    <div className=" lg:mt-3 xl:mt-3 mt-0 ">
       <div className="flex justify-between items-center text-black">
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
         <motion.div
@@ -35,8 +35,8 @@ export default function About({ myInfo }) {
               src={myInfo?.myImageDesc}
               alt=""
             />
-            <div className="absolute h-28 w-28 bg-primary rounded-tl-xl opacity-30 -top-7 -left-7 z-[9] "></div>
-            <div className="absolute h-28 w-28 bg-primary rounded-br-xl opacity-30 lg:right-14 xl:right-14 -right-6 -bottom-7  z-[9] "></div>
+            <div className="absolute h-28 w-28 bg-primary rounded-tl-xl opacity-30 xl:-top-7 lg:-top-7 -top-4 xl:-left-7 lg:-left-7 -left-4 z-[9] "></div>
+            <div className="absolute h-28 w-28 bg-primary rounded-br-xl opacity-30 lg:right-14 xl:right-14 -right-4 xl:-bottom-7 lg:-bottom-7 -bottom-4  z-[9] "></div>
           </div>
         </motion.div>
         <motion.div
