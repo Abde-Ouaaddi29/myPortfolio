@@ -205,8 +205,8 @@ export const projectList = [
 
 import img from "../assets/imgRbg.png";
 import about2 from "../assets/header2.jpg";
-import Cv_Fr from "../assets/ABDERRAHIM_OUAADDI_CV_en.pdf";
-import Cv_En from "../assets/ABDERRAHIM_OUAADDI_CV_fr.pdf";
+import Cv_Fr from "../assets/developper-web-full-stack-abderrahim-ouaaddi-FR.pdf";
+import Cv_En from "../assets/developper-web-full-stack-abderrahim-ouaaddi-EN.pdf";
 
 export const myInfoList = {
   fullName: "ABDERRAHIM OUAADDI",

@@ -58,6 +58,8 @@ export default function Header() {
       id="header"
       className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-6 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
     >
+      {myInfo.myImage == '' ? 'Loading' : 'Loading2' }
+
       <ParticlesComponent />
 
       <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] xl:h-[110vh] h-[115vh] relative">
@@ -139,11 +141,11 @@ export default function Header() {
           className="outline outline-green-500 outline-offset-4 animate-move rounded-full lg:w-[24rem] w-[15rem]  relative lg:m-6 my-7"
         >
           <div className="bg-gradient-wave  animate-wave bg-[length:200%_200%] rounded-full w-full h-full absolute top-0 left-0 -z-10"></div>
-          <img
-            className="rounded-full lg:w-[24rem] w-[15rem] z-40 img-float"
-            src={myInfo.myImage}
-            alt=""
-          />
+            <img
+              className="rounded-full lg:w-[24rem] w-[15rem] z-40 img-float"
+              src={myInfo.myImage}
+              alt=""
+            />
         </motion.div>
 
         <motion.div
