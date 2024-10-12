@@ -58,8 +58,6 @@ export default function Header() {
       id="header"
       className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-6 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
     >
-      {myInfo.myImage == '' ? 'Loading' : 'Loading2' }
-
       <ParticlesComponent />
 
       <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] xl:h-[110vh] h-[115vh] relative">
