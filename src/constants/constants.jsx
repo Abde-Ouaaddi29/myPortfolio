@@ -1,5 +1,5 @@
 ////////// React icons /////////
-import React from "react";  // Import React
+import React from "react"; // Import React
 
 import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
@@ -252,34 +252,73 @@ export const myInfoList = {
 export const experiencesList = [
   {
     id: "23",
-    date: ["Mai 2024", "May 2024"],
-    title: [
-      "Développeur Full Stack (Stage)",
-      "Full Stack Developer (Internship)",
+    date: ["Octobre 2024", "October 2024"],
+    title: ["Développeur Full Stack", "Full Stack Developer"],
+    company: [
+      "OMNIPILOTE, Casablanca, Remote",
+      "OMNIPILOTE, Casablanca, Remote",
     ],
-    company: ["Centre de Santé - Tafraout", "Health Center - Tafraout"],
     roles: [
       [
-        "Travaillé en tant que membre d'une équipe de développement pour concevoir et créer un système de gestion de la vaccination.",
-        "Le système gère les opérations de vaccination entre les médecins et les patients, permettant aux patients de demander des rendez-vous pour la vaccination.",
-        "Collaboré avec l'équipe médicale pour définir les exigences et les fonctionnalités du système.",
-        "Développé une API RESTful et assuré sa sécurité à l'aide de JWT (JSON Web Token).",
-        "Utilisation de la méthodologie Agile (Scrum) avec des livraisons hebdomadaires.",
+        "Participation au développement d'une application de gestion complète pour le suivi et l’analyse des opérations clients, incluant des modules de reporting, des interventions techniques et des analyses de coûts.",
+        "Mise en place de fonctionnalités telles que les notifications de fin de contrat, les alertes de rentabilité et les rapports détaillés par équipements et par clients.",
+        "Contribué à l'optimisation opérationnelle pour une prise de décision éclairée.",
       ],
       [
-        "Worked as part of a development team to design and build a vaccination management system.",
-        "The system manages vaccination operations between doctors and patients, allowing patients to request appointments for vaccination.",
-        "Collaborated with the medical team to define system requirements and functionalities.",
-        "Developed a RESTful API and ensured its security using JWT (JSON Web Token).",
-        "Using Agile methodology (Scrum) with weekly deliveries.",
+        "Contributed to the development of a comprehensive management application for tracking and analyzing client operations, including reporting modules, technical interventions, and cost analysis.",
+        "Implemented features like contract end notifications, profitability alerts, and detailed reports by equipment and clients.",
+        "Helped optimize operations to support informed decision-making.",
       ],
     ],
     technologies: [
       "React.js",
       "Tailwind CSS",
-      "Express.js",
+      "Laravel/Lumen (API REST)",
+      "Postman",
+      "MySQL",
+    ],
+  },
+  {
+    id: "22",
+    date: ["Octobre - Novembre 2024", "October - November 2024"],
+    title: ["Développeur Web (Stage)", "Web Developer (Internship)"],
+    company: ["ValaBleu, Agadir", "ValaBleu, Agadir"],
+    roles: [
+      [
+        "Création d'un site WordPress avec fonctionnalités avancées et mise en place de mesures de sécurité pour protéger les données.",
+      ],
+      [
+        "Created a WordPress site with advanced features and implemented security measures to protect data.",
+      ],
+    ],
+    technologies: ["WordPress", "PHP", "MySQL", "Web Security"],
+  },
+  {
+    id: "21",
+    date: ["Avril - Mai 2024", "April - May 2024"],
+    title: [
+      "Développeur Web Full Stack (Stage PFE)",
+      "Full Stack Web Developer (End-of-Studies Internship)",
+    ],
+    company: ["Centre de Santé - Tafraout", "Health Center - Tafraout"],
+    roles: [
+      [
+        "Développement d’un système de gestion des vaccins pour améliorer l'efficacité des rendez-vous de vaccination.",
+        "Création d’une API REST sécurisée avec JWT et coordination de sprints Agile.",
+        "Réduction des temps de chargement de 20 % en optimisant les fonctionnalités critiques.",
+      ],
+      [
+        "Developed a vaccine management system to enhance the efficiency of vaccination appointments.",
+        "Built a secure REST API using JWT and coordinated Agile sprints.",
+        "Reduced loading times by 20% by optimizing critical features.",
+      ],
+    ],
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
       "Node.js",
-      "MongoDB",
+      "Express.js",
+      "MySQL",
       "JWT",
       "Agile (Scrum)",
     ],
@@ -301,7 +340,7 @@ export const educationList = [
     ],
     certification: [
       "Certificat en Programme d'Innovation Entrepreneuriale (PIE)",
-      "Certificate in Programme d'Innovation Entrepreneuriale (PIE)"  
+      "Certificate in Programme d'Innovation Entrepreneuriale (PIE)",
     ],
   },
   {

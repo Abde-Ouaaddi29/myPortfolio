@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaWordpressSimple } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
 import { SiPhp } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa";
@@ -117,6 +117,10 @@ export default function Technologies() {
       onMouseEnter={() => Mouse("UML")}
       className="fill-gray-500 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down "
     />,
+    <FaWordpressSimple
+      onMouseEnter={() => Mouse("CMS | Wordpress")}
+      className="fill-blue-gray-800 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
+    />,
     <SiSonarqube
       onMouseEnter={() => Mouse("sonarqube | testing code quality")}
       className="fill-blue-300 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
@@ -164,11 +168,7 @@ export default function Technologies() {
             {technologies.map((item, index) => {
               return (
                 <>
-                  <ul
-                    key={index}
-                  >
-                    {item}
-                  </ul>
+                  <ul key={index}>{item}</ul>
                 </>
               );
             })}
