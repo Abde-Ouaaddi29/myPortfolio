@@ -56,11 +56,11 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="lg:px-10 xl:px-10 md:px-10 sm:px-10 px-6 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
+      className="lg:px-10 xl:px-10 pt-2 md:px-10 sm:px-10  px-6 relative lg:bg-[radial-gradient(circle_1000px_at_130%_120px,#fdba74,transparent)] bg-[radial-gradient(circle_900px_at_200%_10px,#fdba74,transparent)]"
     >
       <ParticlesComponent />
 
-      <div className="flex flex-col justify-center items-center lg:flex-row md:flex-col lg:justify-between lg:items-center md:h-[150vh] sm:h-[160vh] lg:h-[110vh] xl:h-[110vh] h-[115vh] relative">
+      <div className="flex flex-col py-32 justify-center items-center xl:flex-row lg:flex-row md:flex-col lg:justify-between lg:items-center relative">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ y: -100, opacity: 0 }}
@@ -78,7 +78,7 @@ export default function Header() {
             <span className="font-light lg:text-3xl text-xl mr-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {language == "Fr" ? "je suis" : "I'm"}
             </span>{" "}
-            <span className="animated-text lg:text-3xl text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
+            <span className="animated-text xl:text-3xl lg:text-3xl text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-700">
               {currentText}
             </span>
           </div>

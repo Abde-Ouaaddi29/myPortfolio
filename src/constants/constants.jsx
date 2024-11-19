@@ -22,6 +22,8 @@ import { FaDocker } from "react-icons/fa";
 import { SiUml } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiSonarqube } from "react-icons/si";
+import { FaRegChartBar } from "react-icons/fa";
+
 
 ////////// images /////////
 
@@ -32,7 +34,8 @@ import Movie1 from "../assets/screenMovies.png";
 import Movie2 from "../assets/ScreenMovies2.png";
 import Tasks1 from "../assets/screenFullStackTasks.png";
 import Tasks2 from "../assets/sceenfullstchTask2.png";
-import Todo1 from "../assets/screen1Deily.png";
+import report1 from "../assets/reporting1.png";
+import report2 from "../assets/reporting2.png";
 import gym1 from "../assets/screenUltraGym1.png";
 import gym2 from "../assets/screenGym2.png";
 import gym3 from "../assets/sceenGym2.png";
@@ -62,6 +65,33 @@ export const projectList = [
     deployLink: "https://you-shop-ecom.netlify.app/",
     githubLink:
       "https://github.com/mohamed-dabach/you-shop-pro/tree/linking_to_server_ouaaddi",
+    hosted: true,
+    privacy: true,
+  },
+  {
+    id: "873",
+    title: [
+      "Reporting et suivi analytique des données | Statistiques",
+      "Reporting and Analytical Data Tracking | Statistics",
+    ],
+    description: [
+      "Une application présentant un module de reporting pour une analyse opérationnelle précise et informée, avec des statistiques mensuelles, trimestrielles et annuelles. (version-test)",
+      "An application featuring a reporting module for precise and informed operational analysis, with monthly, quarterly, and annual statistics. (test-version)",
+    ],
+    
+    image: [report1, report2],
+    builtTechnologies: [
+      <FaHtml5 />,
+      <RiTailwindCssFill />,
+      <RiReactjsFill />,
+      <SiRedux />,
+      <FaLaravel />,
+      <SiMysql />,
+      <FaRegChartBar/>,
+      <SiPostman />,
+    ],
+    deployLink: "https://omnipilote-statistics.netlify.app/",
+    githubLink: "https://github.com/Abde-Ouaaddi29/omnipilote-statistics-tasks",
     hosted: true,
     privacy: true,
   },
@@ -116,8 +146,8 @@ export const projectList = [
   {
     id: "458",
     title: [
-      "Système de Gestion des Vaccinations à l'Hôpital",
-      "Hospital Vaccination Management System",
+      "Système de Gestion des Vaccinations à l'Hôpital (PFE)",
+      "Hospital Vaccination Management System (PFE)",
     ],
     description: [
       "Une plateforme intégrée qui optimise l'administration et la surveillance des vaccinations dans un cadre hospitalier, améliorant l'efficacité et les soins aux patients. Tout patient ou responsable d'enfant peut prendre un rendez-vous de vaccination avec un médecin.",
@@ -155,28 +185,6 @@ export const projectList = [
     ],
     deployLink: "https://movies-details-ouaaddi.netlify.app/",
     githubLink: "https://github.com/Abde-Ouaaddi29/MOVIES-TP-React.js-Api",
-    hosted: true,
-    privacy: true,
-  },
-  {
-    id: "873",
-    title: [
-      "TodoList en Ligne | Organisation",
-      "Online TodoList | Organization",
-    ],
-    description: [
-      "Une application simple de liste de tâches pour organiser les tâches quotidiennes.",
-      "A simple todo list application for organizing daily tasks.",
-    ],
-    image: [Todo1],
-    builtTechnologies: [
-      <FaHtml5 />,
-      <RiReactjsFill />,
-      <SiRedux />,
-      <RiTailwindCssFill />,
-    ],
-    deployLink: "https://abde-ouaaddi29.github.io/todoList/",
-    githubLink: "https://github.com/Abde-Ouaaddi29/todoList",
     hosted: true,
     privacy: true,
   },
@@ -260,16 +268,15 @@ export const experiencesList = [
     ],
     roles: [
       [
-        "Participation au développement d'une application de gestion complète pour le suivi et l’analyse des opérations clients, incluant des modules de reporting, des interventions techniques et des analyses de coûts.",
-        "Mise en place de fonctionnalités telles que les notifications de fin de contrat, les alertes de rentabilité et les rapports détaillés par équipements et par clients.",
-        "Contribué à l'optimisation opérationnelle pour une prise de décision éclairée.",
+        "Développement d’un module de reporting pour une analyse opérationnelle précise et informée.",
+        "Création de statistiques mensuelles, trimestrielles et annuelles pour évaluer les tendances.",
       ],
       [
-        "Contributed to the development of a comprehensive management application for tracking and analyzing client operations, including reporting modules, technical interventions, and cost analysis.",
-        "Implemented features like contract end notifications, profitability alerts, and detailed reports by equipment and clients.",
-        "Helped optimize operations to support informed decision-making.",
+        "Development of a reporting module for precise and informed operational analysis.",
+        "Created monthly, quarterly, and annual statistics to evaluate trends.",
       ],
     ],
+    
     technologies: [
       "React.js",
       "Tailwind CSS",
