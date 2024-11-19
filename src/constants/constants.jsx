@@ -202,10 +202,10 @@ export const projectList = [
       <SiRedux />,
       <RiTailwindCssFill />,
     ],
-    deployLink: "https://",
+    deployLink: "https://abderrahim-ouaaddi.netlify.app/",
     githubLink: "https://github.com/Abde-Ouaaddi29/Portfolio",
     hosted: true,
-    privacy: true,
+    privacy: false,
   },
 ];
 
