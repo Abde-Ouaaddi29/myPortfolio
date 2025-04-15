@@ -27,7 +27,7 @@ export default function Experience() {
         <div className="lg:w-4/12 xl:lg:w-4/12 w-3/12 h-[0.2px] bg-orange-500"></div>
       </div>
 
-      <div className="xl:py-20 lg:py-20 py-14">
+      <div className="xl:py-14 lg:py-14 py-14">
         {educations.length > 0 ? (
           educations.map((education) => {
             return (
@@ -44,7 +44,7 @@ export default function Experience() {
                       <div className="border-l-2 border-gray-300 h-full"></div>
                     </div>
 
-                    <div className="pb-8">
+                    <div className="pb-4">
                       <h3 className="text-primary font-semibold mb-1">
                         {education?.year}
                       </h3>
@@ -75,7 +75,7 @@ export default function Experience() {
                         )}
                       </ul>
 
-                      <h5 className="text-gray-600 font-semibold my-4">
+                      <h5 className="text-gray-500  my-2">
                         {language === "Fr"
                           ? education?.institution[0]
                           : education?.institution[1]}

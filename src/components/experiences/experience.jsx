@@ -62,7 +62,7 @@ export default function Experience() {
                           type: "spring",
                           stiffness: 30,
                         }}
-                        className="text-gray-600 xl:text-xl lg:text-xl font-semibold my-4"
+                        className="text-gray-600 xl:text-xl lg:text-xl font-semibold my-3"
                       >
                         {language == "Fr"
                           ? experience?.company[0]
@@ -82,7 +82,7 @@ export default function Experience() {
                           (role) => {
                             return (
                               <>
-                                <li className="mb-2 lg:text-xl xl:text-xl text-gray-500">
+                                <li className="mb-2  text-gray-500">
                                   {role}
                                 </li>
                               </>
@@ -91,12 +91,12 @@ export default function Experience() {
                         )}
                       </motion.ul>
 
-                      <h5 className="text-gray-600 lg:text-xl xl:text-xl font-semibold my-4">
+                      <h5 className="text-gray-600 font-semibold my-3">
                         {language == "Fr"
                           ? "Technologies Utilisées"
                           : "Used Technologies"}
                       </h5>
-                      <ul className="list-disc ml-6  text-gray-700">
+                      <ul className="list-disc ml-6  text-gray-500">
                         {experience?.technologies.map((tech, key) => {
                           return (
                             <>
@@ -109,7 +109,7 @@ export default function Experience() {
                                   type: "spring",
                                   stiffness: 50,
                                 }}
-                                className="mb-2"
+                                className="mb-1"
                               >
                                 {tech}
                               </motion.li>

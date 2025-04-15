@@ -22,6 +22,8 @@ import { SiRedux } from "react-icons/si";
 import { SiSonarqube } from "react-icons/si";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import { RiNextjsFill } from "react-icons/ri";
+
 
 export default function Technologies() {
   const [tech, setTech] = useState();
@@ -81,11 +83,11 @@ export default function Technologies() {
       className="fill-blue-800 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
     <SiExpress
-      onMouseEnter={() => Mouse("Express-js")}
+      onMouseEnter={() => Mouse("Expressjs")}
       className="fill-gray-600 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"
     />,
     <FaNode
-      onMouseEnter={() => Mouse("Node-js")}
+      onMouseEnter={() => Mouse("Nodejs")}
       className="fill-green-600 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
     <SiJirasoftware
@@ -121,6 +123,10 @@ export default function Technologies() {
       onMouseEnter={() => Mouse("CMS | Wordpress")}
       className="fill-blue-gray-800 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
     />,
+    <RiNextjsFill
+    onMouseEnter={() => Mouse("Nextjs")}
+    className="fill-blue-gray-800 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-bounce-slow"
+  />,
     <SiSonarqube
       onMouseEnter={() => Mouse("sonarqube | testing code quality")}
       className="fill-blue-300 text-8xl flex justify-center items-center p-2 m-3 border-[4px] border-primary border-opacity-20 rounded-lg cursor-pointer hover:border-opacity-35 animate-move-up-down"

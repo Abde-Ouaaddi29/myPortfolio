@@ -263,24 +263,30 @@ export const experiencesList = [
     date: ["Octobre 2024", "October 2024"],
     title: ["Développeur Full Stack", "Full Stack Developer"],
     company: [
-      "OMNIPILOTE, Casablanca, Remote",
-      "OMNIPILOTE, Casablanca, Remote",
+      "Jway Services, Agadir, Full time",
+      "Jway Services, Agadir, Full time",
     ],
     roles: [
       [
-        "Développement d’un module de reporting pour une analyse opérationnelle précise et informée.",
-        "Création de statistiques mensuelles, trimestrielles et annuelles pour évaluer les tendances.",
+        "Participation au développement et à la maintenance d’un système ERP avec plusieurs modules : gestion commerciale, gestion de projets, comptabilité, etc.",
+        "Implémentation de solutions RMS (Ressources Management Solutions) pour une meilleure gestion des ressources humaines et matérielles.",
+        "Contribution à l’amélioration des fonctionnalités existantes et résolution des bugs dans le cadre de la maintenance continue.",
+        "Collaboration avec les équipes pour assurer la cohérence des données et optimiser les processus métiers."
       ],
+      // English
       [
-        "Development of a reporting module for precise and informed operational analysis.",
-        "Created monthly, quarterly, and annual statistics to evaluate trends.",
-      ],
+        "Worked on the development and maintenance of an ERP system with multiple modules: commercial management, project management, accounting, etc.",
+        "Implemented RMS (Resources Management Solutions) to enhance human and material resource management.",
+        "Contributed to improving existing features and fixing bugs as part of ongoing system maintenance.",
+        "Collaborated with teams to ensure data consistency and optimize business processes."
+      ]
     ],
     
     technologies: [
       "React.js",
       "Tailwind CSS",
-      "Laravel/Lumen (API REST)",
+      "PHP",
+      "Spring Boot",
       "Postman",
       "MySQL",
     ],
